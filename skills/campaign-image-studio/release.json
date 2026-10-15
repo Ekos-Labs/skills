@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "campaign-image-studio",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "byo-provider",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "One image model API key: Black Forest Labs (FLUX), Higgsfield, OpenAI, Google Gemini (Nano Banana) or fal.ai"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

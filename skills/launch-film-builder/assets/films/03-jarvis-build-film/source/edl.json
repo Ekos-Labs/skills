@@ -1,0 +1,196 @@
+{
+  "fps": 30,
+  "duration": 62.0,
+  "source_dir": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch/sources",
+  "music": {
+    "file": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch/music/57Fe9e5iLgg.wav",
+    "offset": 3.75
+  },
+  "clips": [
+    {
+      "id": "c1",
+      "at": 0.0,
+      "dur": 5.3,
+      "src": "Byo-lcR6Bmw",
+      "in": 1.9,
+      "beat": "cold open: dark room, phone lights up"
+    },
+    {
+      "id": "c2",
+      "at": 5.3,
+      "dur": 3.9,
+      "src": "Byo-lcR6Bmw",
+      "in": 35.95,
+      "beat": "cold open: phone on the table"
+    },
+    {
+      "id": "m1",
+      "at": 9.2,
+      "dur": 1.7,
+      "src": "Sgxbx65IDeM",
+      "in": 0.4,
+      "beat": "anyone can build: eye in light"
+    },
+    {
+      "id": "m2",
+      "at": 10.9,
+      "dur": 1.7,
+      "src": "iCOiIr3f9Q",
+      "in": 2.0,
+      "beat": "anyone can build: builder at night"
+    },
+    {
+      "id": "m3",
+      "at": 12.6,
+      "dur": 1.7,
+      "src": "T_tccP14CyE",
+      "in": 5.0,
+      "beat": "writes the code: hands typing"
+    },
+    {
+      "id": "m4",
+      "at": 16.0,
+      "dur": 1.7,
+      "src": "Sgxbx65IDeM",
+      "in": 20.0,
+      "beat": "designs the product: pen on paper"
+    },
+    {
+      "id": "m5",
+      "at": 17.7,
+      "dur": 1.7,
+      "src": "f1T7xBSrnEs",
+      "in": 2.0,
+      "beat": "designs the product: 3D printer"
+    },
+    {
+      "id": "m6",
+      "at": 19.4,
+      "dur": 1.7,
+      "src": "bEg4NVcHc4k",
+      "in": 0.6,
+      "beat": "ships overnight: factory",
+      "precrop": "crop=1180:664:30:10"
+    },
+    {
+      "id": "m7",
+      "at": 21.1,
+      "dur": 1.7,
+      "src": "ruZOvtJUS0g",
+      "in": 72.5,
+      "beat": "ships overnight: city at night"
+    },
+    {
+      "id": "r1",
+      "at": 22.8,
+      "dur": 0.4,
+      "src": "ENSjcy3eh8U",
+      "in": 6.0,
+      "beat": "rush"
+    },
+    {
+      "id": "r2",
+      "at": 23.2,
+      "dur": 0.4,
+      "src": "pIsXOnFymzc",
+      "in": 4.8,
+      "beat": "rush"
+    },
+    {
+      "id": "r3",
+      "at": 23.6,
+      "dur": 0.4,
+      "src": "ENSjcy3eh8U",
+      "in": 16.4,
+      "beat": "rush"
+    },
+    {
+      "id": "r4",
+      "at": 24.0,
+      "dur": 0.4,
+      "src": "VSmeG54-7NU",
+      "in": 3.0,
+      "beat": "rush"
+    },
+    {
+      "id": "r5",
+      "at": 24.4,
+      "dur": 0.4,
+      "src": "fziKmtC47RE",
+      "in": 2.4,
+      "beat": "rush"
+    },
+    {
+      "id": "r6",
+      "at": 24.8,
+      "dur": 0.4,
+      "src": "Zky6mZMicks",
+      "in": 10.0,
+      "beat": "rush"
+    },
+    {
+      "id": "r7",
+      "at": 25.2,
+      "dur": 0.4,
+      "src": "dKZv05JZhss",
+      "in": 3.6,
+      "beat": "rush"
+    },
+    {
+      "id": "r8",
+      "at": 25.6,
+      "dur": 0.4,
+      "src": "T_tccP14CyE",
+      "in": 14.0,
+      "beat": "rush"
+    },
+    {
+      "id": "g1",
+      "at": 28.2,
+      "dur": 2.3,
+      "src": "bNGaHfakrc0",
+      "in": 8.0,
+      "beat": "selling didn't: stuck at the window"
+    },
+    {
+      "id": "t1",
+      "at": 30.5,
+      "dur": 3.1,
+      "src": "Dld2X4IpXnw",
+      "in": 1.0,
+      "beat": "the turn: laptop working in the dark"
+    },
+    {
+      "id": "e1",
+      "at": 40.4,
+      "dur": 1.2,
+      "src": "ruZOvtJUS0g",
+      "in": 36.0,
+      "beat": "engine: the buyers out there"
+    },
+    {
+      "id": "e2",
+      "at": 45.0,
+      "dur": 1.4,
+      "src": "R75aMAwxtik",
+      "in": 2.0,
+      "beat": "engine: your okay"
+    },
+    {
+      "id": "o1",
+      "at": 52.0,
+      "dur": 1.5,
+      "src": "pIsXOnFymzc",
+      "in": 40.0,
+      "beat": "built around your business: a ring in the maker's hands"
+    },
+    {
+      "id": "o2",
+      "at": 53.5,
+      "dur": 1.5,
+      "src": "ENSjcy3eh8U",
+      "in": 33.6,
+      "beat": "yours to keep: the finished table"
+    }
+  ]
+}

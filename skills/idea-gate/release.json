@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "slug": "idea-gate",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-adaptation",
+    "description": "Adapted from Eshaan Kansal's MIT-licensed Pocket CMO Idea Gate.",
+    "url": "https://github.com/Eshaank08/pocket-cmo/blob/bfb8e8c77ecc94c7c06076bc32ffebaef564989f/src/lib/idea-gate-gates.ts",
+    "commit": "bfb8e8c77ecc94c7c06076bc32ffebaef564989f",
+    "license": "MIT",
+    "notice": "LICENSE"
+  },
+  "dependencies": [
+    "Claude Code or Codex"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

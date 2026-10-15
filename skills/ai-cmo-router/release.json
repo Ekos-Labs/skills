@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "slug": "ai-cmo-router",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Original Ekos GTM routing instructions; no third-party skill files bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex; product-context.md is optional"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

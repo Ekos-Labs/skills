@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "outreach-launcher",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "byo-provider",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "One of: Apollo, lemlist or Instantly, connected through its official MCP connector"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

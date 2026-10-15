@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "slug": "competitor-ads-intelligence",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "byo-provider",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Original Ekos competitor-ad research workflow using Meta's documented Ad Library API; no upstream skill code bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "Meta Ad Library API access token for EU/UK commercial API searches, or manual public Ad Library review",
+    "Python 3 standard library for the optional API helper"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

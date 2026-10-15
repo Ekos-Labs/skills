@@ -1,0 +1,848 @@
+<!doctype html>
+<html lang="en">
+<!-- Made with the Bang Motion skill v1.19.0 by Bang Tutorial (https://youtube.com/bangtutorial) - MIT - https://github.com/bangtutorial/bang-motion -->
+<head>
+<meta charset="utf-8">
+<title>Finder by Ekos Labs — launch promo</title>
+<!--
+  FINDER BY EKOS LABS — 16:9 promo, 59s, silent.  (V2 cut)
+
+  =====  STYLE BRIEF  =====
+  Tema/produk + 3 kata sifat : Finder by Ekos Labs, a free GTM report from one website URL.
+                               calm · precise · inevitable
+  Konsep                     : #15 klaim -> cara -> hasil. Bukti Finder ADALAH artefak yang ia hasilkan,
+                               dan artefak itu visual (bar pasar, 200 pembeli dimodelkan, baris kanal,
+                               tolok ukur pesaing, rencana empat minggu).
+  Sidik jari struktur        : klaim -> cara -> hasil · 11 babak · halaman ASLI ekoslabs.com dibaca /
+                               kalimat / bar input diketik / bukti terkumpul / kartu laporan mekar /
+                               200 titik keluar dari kartu / pesaing + ulasan / kanal + subreddit /
+                               siapa yang bisa bilang ya / rencana empat minggu / tanda lahir dari kartu
+                               · pembuka: halaman NYATA sedang dibaca close-up
+                               · penutup: logo lahir dari kartu hasil
+  Palet (dari brand)         : latar #f7f7f8 (find/src/app/globals.css --background) · tinta #0a0a0c
+                               permukaan #ffffff · garis #dedee4 · redup #606068 · samar #96969f
+                               AKSEN TUNGGAL #3663ff (--accent). Halaman gelap di babak 1 adalah
+                               tangkapan layar asli, bukan warna kedua.
+  Font                       : Inter 400/500/600 + Instrument Serif italic — font UI produk sendiri
+  Tanda tangan gerak         : wadah morph — slot UI terlepas, mekar jadi kartu, isinya berganti enam kali,
+                               lalu menyusut jadi pil lalu titik; tanda lahir di titik itu
+  Gerak latar                : latar bertekstur + kamera bernapas + dua medan cahaya aksen yang drift
+                               + satu garis rambut lengkung melintas pelan. Butiran DITURUNKAN dari v1
+                               (.42 -> .14) supaya grafiknya bersih.
+  Transisi                   : wadah mekar/menyusut · zoom ke potongan UI · kartu berputar masuk dari
+                               kedalaman · pane berganti (gulung ke atas, yang baru naik). Tanpa cut keras.
+  Momen istimewa (sekali)    : 200 titik keluar dari kartu, menyebar seluruh frame, mengelompok jadi
+                               empat reaksi, lalu runtuh kembali ke dalam kartu
+  =========================
+
+  PERUBAHAN V2 (permintaan Eshaan):
+   1. Halaman yang dibaca di babak 1 dan URL yang diketik sekarang ekoslabs.com yang ASLI
+      (assets/ekos-home.png, tangkapan langsung), di dalam bingkai peramban.
+   2. Lebih bersih: butiran .42->.14, cahaya latar diturunkan, garis rambut .16->.10,
+      kamera lebih sedikit dan lebih lambat, satu gagasan per pane.
+   3. Lebih panjang: 37s -> 59s.
+   4. Kanal ditampilkan lengkap DENGAN alasannya, dan subreddit-nya disebut satu per satu.
+   5. Pesaing: berapa yang mereka hasilkan + ulasan mereka.
+   6. Rencana empat minggu penuh — tidak lagi terpotong, tiap minggu cukup lama untuk dibaca.
+   7. Isi yang di situs terkunci ditampilkan di film. TIDAK PERNAH ada ajakan memesan panggilan.
+
+  Kejujuran: setiap angka di kartu adalah CONTOH keluaran dan diberi label "Example output".
+  Pesaing tidak disebut namanya. Simulasi audiens membawa kalimat penyangkalan produk sendiri.
+  Tanpa nama klien, tanpa logo pelanggan, tanpa klaim hasil, tanpa CTA panggilan.
+
+  Tanpa suara. Autoplay + loop, tanpa player. ?debug=1 = panel scrub. ?clean=1 = tahan untuk export.
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<style>
+:root{
+  --bg:#f7f7f8; --ink:#0a0a0c; --surface:#ffffff; --raised:#f1f1f4;
+  --line:#e2e2e8; --muted:#606068; --faint:#96969f;
+  --accent:#3663ff; --accent-soft:rgba(54,99,255,.07); --accent-border:rgba(54,99,255,.22);
+  --shadow:0 44px 96px -44px rgba(20,20,35,.26), 0 8px 26px -14px rgba(20,20,35,.12);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:100%;height:100%;background:#e8e8ea;overflow:hidden;
+  font-family:"Inter",system-ui,sans-serif;color:var(--ink);-webkit-font-smoothing:antialiased}
+#filters{position:fixed;width:0;height:0;opacity:0;pointer-events:none}
+
+#stage{position:fixed;left:50%;top:50%;width:1920px;height:1080px;
+  transform:translate(-50%,-50%) scale(1);overflow:hidden;background:var(--bg)}
+
+/* ---- latar: 3 lapis, tidak pernah diam, LEBIH BERSIH dari v1 ---- */
+#bg{position:absolute;inset:0;overflow:hidden}
+#bg .base{position:absolute;inset:0;background:
+  radial-gradient(64% 54% at 50% 38%, #ffffff 0%, rgba(255,255,255,0) 72%), var(--bg)}
+#bg .glow{position:absolute;border-radius:50%;will-change:transform}
+#bg .g1{left:-320px;top:-380px;width:1400px;height:1400px;
+  background:radial-gradient(circle, rgba(54,99,255,.075) 0%, rgba(54,99,255,0) 66%)}
+#bg .g2{left:1080px;top:420px;width:1200px;height:1200px;
+  background:radial-gradient(circle, rgba(54,99,255,.05) 0%, rgba(54,99,255,0) 64%)}
+#bg .hair{position:absolute;inset:0;width:1920px;height:1080px;overflow:visible}
+#bg .hair path{fill:none;stroke:var(--accent);stroke-width:1.5;opacity:.10}
+#bg .grain{position:absolute;inset:-10%;opacity:.14;mix-blend-mode:multiply;
+  filter:url(#grain);pointer-events:none}
+
+/* ---- rig kamera ---- */
+#world{position:absolute;left:0;top:0;width:1920px;height:1080px;transform-origin:0 0;will-change:transform}
+
+/* ---- tipografi adegan: sentence case, 500, tanpa titik ---- */
+.say{position:absolute;left:0;right:0;text-align:center;opacity:1;pointer-events:none}
+.say h2{font-size:78px;line-height:1.06;font-weight:500;letter-spacing:-.035em;color:var(--ink);
+  display:inline-block;white-space:nowrap}
+.say.sm h2{font-size:64px}
+.serif{font-family:"Instrument Serif",Georgia,serif;font-style:italic;font-weight:400;letter-spacing:-.01em}
+.wd{display:inline-block;white-space:nowrap}
+.ch{display:inline-block;will-change:transform,opacity,filter;opacity:0}
+
+/* ---- keluarga render objek: kartu putih, ring 1px, bayangan lebar ---- */
+.card{position:absolute;background:var(--surface);border-radius:28px;
+  box-shadow:inset 0 0 0 1px var(--line), var(--shadow)}
+
+/* babak 1: ekoslabs.com yang ASLI, di dalam bingkai peramban */
+#site{left:370px;top:170px;width:1180px;height:748px;overflow:hidden;opacity:0}
+#site .chrome{height:72px;display:flex;align-items:center;gap:12px;padding:0 28px;
+  background:#fbfbfc;border-bottom:1px solid var(--line)}
+#site .chrome i.d{width:14px;height:14px;border-radius:99px;background:#e0e0e6;flex:none}
+#site .chrome .addr{margin-left:22px;display:inline-flex;align-items:center;gap:14px;height:44px;padding:0 26px 0 14px;
+  border-radius:99px;background:var(--raised);color:var(--muted);font-size:24px;letter-spacing:-.01em}
+#site .chrome .addr img{width:30px;height:30px;object-fit:contain;display:block}
+#site .view{position:absolute;left:0;right:0;top:72px;bottom:0;overflow:hidden;background:#09090b}
+#site .view img{width:100%;height:100%;object-fit:cover;object-position:50% 0;display:block}
+/* apa yang dibaca Finder: garis bawah aksen + tag kecil, anotasi mockup */
+.find{position:absolute;height:4px;background:var(--accent);border-radius:2px;transform:scaleX(0);
+  transform-origin:0 50%;opacity:.95;box-shadow:0 0 18px rgba(54,99,255,.7)}
+.tag{position:absolute;display:inline-flex;align-items:center;height:46px;padding:0 20px;border-radius:10px;
+  background:#ffffff;box-shadow:0 10px 26px -12px rgba(0,0,0,.6);
+  color:var(--accent);font-size:26px;font-weight:500;white-space:nowrap;opacity:0}
+#scanline{position:absolute;left:0;width:1180px;height:70px;opacity:0;
+  background:linear-gradient(to bottom, rgba(54,99,255,0) 0%, rgba(54,99,255,.14) 78%, rgba(54,99,255,.95) 100%)}
+
+/* babak 3: bar input — komponen kanonik #1 */
+#bar{left:470px;top:596px;width:980px;height:124px;border-radius:99px;display:flex;align-items:center;
+  padding:10px 10px 10px 34px;gap:20px;opacity:0}
+#bar .mag{width:38px;height:38px;flex:none}
+#url{font-size:40px;letter-spacing:-.02em;color:var(--ink);white-space:nowrap}
+#url.ph{color:var(--faint)}
+#caret{display:inline-block;width:3px;height:44px;background:var(--accent);vertical-align:-8px;margin-left:2px;opacity:0}
+#btn{margin-left:auto;display:inline-flex;align-items:center;gap:14px;height:104px;padding:0 34px;border-radius:99px;
+  background:var(--accent);color:#fff;font-size:30px;font-weight:500;white-space:nowrap;
+  box-shadow:0 12px 30px -12px rgba(54,99,255,.7)}
+#ripple{position:absolute;border-radius:99px;box-shadow:0 0 0 2px var(--accent-border);opacity:0;pointer-events:none}
+#cursor{position:absolute;left:0;top:0;width:46px;height:58px;opacity:0;z-index:30;
+  filter:drop-shadow(0 6px 10px rgba(20,20,35,.35))}
+
+/* babak 4: bukti yang terkumpul */
+.chip{position:absolute;display:inline-flex;align-items:center;gap:14px;height:66px;padding:0 24px;border-radius:14px;
+  background:var(--surface);box-shadow:inset 0 0 0 1px var(--line), 0 14px 30px -18px rgba(20,20,35,.45);
+  font-size:28px;color:var(--muted);white-space:nowrap;opacity:0}
+.chip i{width:12px;height:12px;border-radius:99px;background:var(--line);flex:none}
+#jev{position:absolute;left:806px;top:470px;display:inline-flex;align-items:center;gap:14px;height:72px;padding:0 26px;
+  border-radius:14px;background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-border);
+  color:var(--accent);font-size:28px;font-weight:500;white-space:nowrap;opacity:0}
+
+/* babak 5-10: kartu laporan — wadah yang sama, isinya berganti enam kali */
+#card{left:280px;top:190px;width:1360px;height:700px;overflow:hidden;opacity:0}
+#card .head{height:96px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;
+  border-bottom:1px solid var(--line)}
+#card .head .ttl{display:flex;align-items:center;gap:18px;min-width:0}
+#card .head .ttl img{width:38px;height:38px;object-fit:contain;display:block;flex:none}
+#card .head .t{font-size:32px;font-weight:500;color:var(--muted);white-space:nowrap}
+#card .head .ex{display:inline-flex;align-items:center;height:48px;padding:0 20px;border-radius:99px;
+  background:var(--accent-soft);color:var(--accent);font-size:22px;font-weight:500;letter-spacing:.14em;text-transform:uppercase}
+#card .pane{position:absolute;left:0;right:0;top:96px;bottom:0;padding:40px 54px;opacity:0}
+.k{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:500}
+.note{font-size:23px;color:var(--faint);line-height:1.45}
+
+/* pane: pasar */
+.bar-row{margin-bottom:34px}
+.bar-row .lab{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:14px}
+.bar-row .lab b{font-size:34px;font-weight:400;color:var(--ink)}
+.bar-row .lab s{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);text-decoration:none}
+.bar-row .lab s.on{color:var(--accent)}
+.bar-row .track{height:18px;border-radius:99px;background:var(--raised);overflow:hidden}
+.bar-row .fill{display:block;height:18px;border-radius:99px;background:var(--accent);transform:scaleX(0);transform-origin:0 50%}
+#move{margin-top:12px;border-radius:20px;background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-border);
+  padding:28px 32px;opacity:0}
+#move .v{font-size:36px;line-height:1.3;letter-spacing:-.02em;margin-top:12px}
+#move .k{color:var(--accent)}
+
+/* pane: simulasi */
+#sim .grp{display:flex;gap:26px;margin-top:8px}
+#sim .g{flex:1}
+#sim .g .kk{display:flex;align-items:center;gap:12px;font-size:26px;color:var(--muted)}
+#sim .g .kk i{width:16px;height:16px;border-radius:99px}
+#sim .g .n{font-size:64px;font-weight:600;letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums;min-width:3ch}
+#sim .stats{display:flex;gap:26px;margin-top:34px}
+#sim .stats div{flex:1;border-radius:18px;box-shadow:inset 0 0 0 1px var(--line);padding:24px 28px}
+#sim .stats .kk{font-size:24px;color:var(--faint)}
+#sim .stats .n{font-size:46px;font-weight:600;letter-spacing:-.03em;margin-top:8px;font-variant-numeric:tabular-nums}
+#sim .note{margin-top:30px}
+
+/* pane: pesaing — berapa yang mereka hasilkan dan bagaimana ulasannya */
+#comp .cards{display:flex;gap:26px;margin-top:6px}
+.cc{flex:1;border-radius:22px;padding:34px 32px;background:#fbfbfc;box-shadow:inset 0 0 0 1px var(--line);opacity:0}
+.cc.on{background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-border)}
+.cc .hd{display:flex;align-items:center;justify-content:space-between;gap:14px}
+.cc .av{width:54px;height:54px;border-radius:15px;background:var(--accent);color:#fff;display:grid;place-items:center;
+  font-size:24px;font-weight:600;flex:none}
+.cc .vf{display:inline-flex;align-items:center;height:38px;padding:0 14px;border-radius:99px;background:#fff;
+  box-shadow:inset 0 0 0 1px var(--line);color:var(--accent);font-size:18px;font-weight:500;
+  letter-spacing:.1em;text-transform:uppercase}
+.cc .nm{margin-top:26px;font-size:27px;font-weight:500;letter-spacing:-.02em;white-space:nowrap}
+.cc .st{display:flex;gap:22px;margin-top:28px;padding-top:28px;border-top:1px solid var(--line)}
+.cc .st div{flex:1}
+.cc .st .kk{font-size:19px;letter-spacing:.12em;text-transform:uppercase;color:var(--faint)}
+.cc .st .n{margin-top:10px;font-size:44px;font-weight:500;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.cc .st .n.up{color:var(--accent)}
+.cc .rv{display:flex;align-items:center;gap:14px;margin-top:28px;padding-top:26px;border-top:1px solid var(--line)}
+.cc .rv .stars{font-size:24px;letter-spacing:.06em;color:var(--accent);white-space:nowrap}
+.cc .rv .sc{font-size:26px;font-weight:500;font-variant-numeric:tabular-nums}
+.cc .rv .ct{margin-left:auto;font-size:21px;color:var(--faint);white-space:nowrap;font-variant-numeric:tabular-nums}
+#comp .note{margin-top:30px}
+
+/* pane: kanal dengan alasannya + subreddit yang disebut satu per satu */
+.chan{display:flex;align-items:center;gap:22px;padding:12px 0;border-bottom:1px solid var(--line);opacity:0}
+#card #where{padding-top:32px;padding-bottom:32px}
+/* logo kanal asli, file yang sama dengan yang dipakai halaman find */
+.chan .ic{width:58px;height:58px;border-radius:15px;background:#fff;flex:none;display:grid;place-items:center;
+  box-shadow:inset 0 0 0 1px var(--line);overflow:hidden}
+.chan .ic img{width:32px;height:32px;object-fit:contain;display:block}
+.chan.on .ic{box-shadow:inset 0 0 0 1px var(--accent-border)}
+.chan .tx .nm{font-size:31px;letter-spacing:-.02em;line-height:1.15}
+.chan .tx .rs{font-size:23px;color:var(--faint);margin-top:5px}
+.chan .fit{margin-left:auto;display:inline-flex;align-items:center;height:42px;padding:0 18px;border-radius:99px;
+  background:var(--raised);font-size:21px;color:var(--muted);white-space:nowrap;flex:none}
+.chan.on .fit{background:#fff;box-shadow:inset 0 0 0 1px var(--accent-border);color:var(--accent);font-weight:500}
+#subs{margin-top:24px}
+#subs .hd{display:flex;align-items:center;gap:14px}
+#subs .hd img{width:30px;height:30px;object-fit:contain;display:block}
+#subs .row{display:flex;flex-wrap:wrap;gap:13px;margin-top:16px}
+#subs .row span{display:inline-flex;align-items:center;gap:11px;height:56px;padding:0 20px;border-radius:13px;
+  background:#fff;box-shadow:inset 0 0 0 1px var(--line);font-size:27px;color:var(--ink);opacity:0}
+#subs .row span b{color:var(--accent);font-weight:500}
+
+/* pane: siapa yang bisa bilang ya */
+.who{display:flex;align-items:center;gap:24px;padding:24px 28px;border-radius:20px;margin-bottom:18px;
+  box-shadow:inset 0 0 0 1px var(--line);opacity:0}
+.who.on{background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-border)}
+.who .av{width:62px;height:62px;border-radius:99px;background:var(--raised);color:var(--muted);display:grid;
+  place-items:center;font-size:24px;font-weight:600;flex:none}
+.who.on .av{background:var(--accent);color:#fff}
+.who .nm{font-size:33px;letter-spacing:-.02em}
+.who .rl{font-size:23px;color:var(--faint);margin-top:4px}
+.who .bd{margin-left:auto;display:inline-flex;align-items:center;height:44px;padding:0 20px;border-radius:99px;
+  background:#fff;box-shadow:inset 0 0 0 1px var(--accent-border);color:var(--accent);font-size:22px;font-weight:500}
+
+/* pane: rencana — empat minggu, tiap minggu diberi waktu dibaca */
+.wk{display:flex;align-items:center;gap:28px;padding:30px 30px;border-radius:20px;margin-bottom:20px;
+  box-shadow:inset 0 0 0 1px var(--line);opacity:0}
+.wk.first{background:var(--accent-soft);box-shadow:inset 0 0 0 1px var(--accent-border)}
+.wk .n{font-size:22px;letter-spacing:.14em;text-transform:uppercase;color:var(--faint);font-weight:500;width:128px;flex:none}
+.wk.first .n{color:var(--accent)}
+.wk .v{font-size:33px;letter-spacing:-.02em;line-height:1.25}
+
+/* klip latar halaman find: kerumunan dengan sebagian orang disorot biru.
+   File yang sama dengan hero find (public/main.mp4). Dipakai DUA kali saja. */
+.clip{position:absolute;left:0;top:0;width:1920px;height:1080px;object-fit:cover;opacity:0;pointer-events:none}
+#clipA{filter:saturate(.62) contrast(1.02)}
+#clipB{filter:saturate(.45) brightness(1.16)}
+#endveil{position:absolute;left:0;top:0;width:1920px;height:1080px;opacity:0;pointer-events:none;
+  background:radial-gradient(58% 52% at 50% 44%, rgba(247,247,248,.97) 0%, rgba(247,247,248,.78) 54%, rgba(247,247,248,.46) 100%)}
+
+/* momen istimewa: 200 titik */
+#dots{position:absolute;left:0;top:0;width:1920px;height:1080px;pointer-events:none}
+#dots i{position:absolute;width:22px;height:22px;border-radius:99px;background:#c4c4cd;opacity:0}
+
+/* penutup */
+#end{position:absolute;left:0;right:0;top:268px;text-align:center;opacity:0}
+#end .lockrow{margin-top:30px}
+#end img.mark{width:132px;display:block;margin:0 auto}
+#end .wm{margin-top:40px;font-size:104px;font-weight:500;letter-spacing:-.04em}
+/* lockup resmi: tanda + wordmark EKOS yang asli, sama seperti nav halaman find */
+#end .lock{display:inline-flex;align-items:center;gap:18px}
+#end .lock .by{font-size:27px;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
+#end .lock img{height:42px;width:auto;object-fit:contain;display:block}
+#end .lock .labs{font-family:"Instrument Serif",Georgia,serif;font-size:50px;line-height:1;letter-spacing:.015em;
+  color:var(--ink);position:relative;top:1px}
+#end .cta{margin-top:38px;display:inline-flex;align-items:center;gap:22px;height:88px;padding:0 34px;border-radius:99px;
+  background:var(--surface);box-shadow:inset 0 0 0 1px var(--accent-border), var(--shadow);font-size:34px}
+#end .cta b{font-weight:500}
+#end .cta s{width:1px;height:38px;background:var(--line);text-decoration:none}
+#end .cta u{text-decoration:none;color:var(--accent)}
+#seed{position:absolute;left:944px;top:524px;width:32px;height:32px;border-radius:99px;background:var(--accent);opacity:0}
+
+#ui{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);display:none;align-items:center;gap:14px;
+  padding:11px 18px;border-radius:16px;background:rgba(14,16,22,.9);border:1px solid rgba(255,255,255,.1);
+  font-size:13px;color:#A0A6B4;z-index:50}
+#ui.on{display:flex}
+#ui button{background:#262A34;color:#fff;border:none;padding:8px 16px;border-radius:9px;font:inherit;cursor:pointer}
+#scrub{width:340px;accent-color:var(--accent)}
+#clock{font-variant-numeric:tabular-nums;min-width:5.2ch;text-align:right}
+</style>
+</head>
+<body>
+
+<svg id="filters"><defs>
+  <filter id="grain" x="0" y="0" width="100%" height="100%">
+    <feTurbulence id="turb" type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" result="n"/>
+    <feColorMatrix in="n" type="saturate" values="0"/>
+    <feComponentTransfer><feFuncA type="linear" slope="0.30"/></feComponentTransfer>
+  </filter>
+</defs></svg>
+
+<div id="stage">
+
+  <div id="bg">
+    <div class="base"></div>
+    <i class="glow g1" id="g1"></i>
+    <i class="glow g2" id="g2"></i>
+    <svg class="hair" viewBox="0 0 1920 1080" preserveAspectRatio="none">
+      <path id="hair" d="M -400 760 C 260 560, 760 900, 1240 640 S 2100 420, 2400 560"/>
+    </svg>
+    <div class="grain"></div>
+  </div>
+
+  <div id="world">
+
+    <!-- klip kerumunan dari hero halaman find, di belakang segalanya -->
+    <video class="clip" id="clipA" muted playsinline preload="auto" poster="assets/find-bg-poster.jpg">
+      <source src="assets/find-bg.mp4" type="video/mp4">
+    </video>
+
+    <!-- babak 1: ekoslabs.com yang ASLI, sedang dibaca -->
+    <div class="card" id="site">
+      <div class="chrome"><i class="d"></i><i class="d"></i><i class="d"></i><span class="addr"><img src="assets/brand/mark.png" alt="">ekoslabs.com</span></div>
+      <div class="view"><img src="assets/ekos-home.png" alt=""></div>
+      <i class="find" id="f1" style="left:199px;top:452px;width:788px"></i>
+      <i class="find" id="f2" style="left:352px;top:581px;width:477px"></i>
+      <i class="find" id="f3" style="left:416px;top:652px;width:348px"></i>
+      <span class="tag" id="t1" style="left:1007px;top:430px">offer</span>
+      <span class="tag" id="t2" style="left:849px;top:559px">customer</span>
+      <span class="tag" id="t3" style="left:784px;top:630px">market</span>
+      <i id="scanline"></i>
+    </div>
+
+    <!-- kalimat adegan -->
+    <div class="say" id="s1" style="top:420px"><h2 class="txt">It starts with your <span class="serif">homepage</span></h2></div>
+    <div class="say" id="s2" style="top:392px"><h2 class="txt">Enter your website</h2></div>
+    <div class="say" id="s3" style="top:300px"><h2 class="txt">Your GTM report <span class="serif">in minutes</span></h2></div>
+    <div class="say sm" id="s4" style="top:120px"><h2 class="txt">See how your buyers react</h2></div>
+    <div class="say sm" id="s5" style="top:120px"><h2 class="txt">What comparable companies <span class="serif">make</span></h2></div>
+    <div class="say sm" id="s6" style="top:120px"><h2 class="txt">Which channels, and <span class="serif">why</span></h2></div>
+    <div class="say sm" id="s7" style="top:120px"><h2 class="txt">Who can say yes</h2></div>
+    <div class="say" id="s8" style="top:104px"><h2 class="txt">One month, <span class="serif">four moves</span></h2></div>
+
+    <!-- babak 3: bar input -->
+    <div class="card" id="bar">
+      <svg class="mag" viewBox="0 0 24 24" fill="none" stroke="#96969f" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <span id="url" class="ph">Add your website</span><i id="caret"></i>
+      <span id="btn">Generate free report
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </span>
+    </div>
+    <i id="ripple"></i>
+
+    <!-- babak 4: bukti -->
+    <span class="chip" id="c1" style="left:296px;top:328px">homepage copy</span>
+    <span class="chip" id="c2" style="left:1268px;top:352px">competitor revenue</span>
+    <span class="chip" id="c3" style="left:232px;top:660px">search demand</span>
+    <span class="chip" id="c4" style="left:1284px;top:680px">communities</span>
+    <span class="chip" id="c5" style="left:700px;top:242px">buying signals</span>
+    <span class="chip" id="c6" style="left:812px;top:786px">public reviews</span>
+    <span id="jev">JEV scores every claim</span>
+
+    <!-- babak 5-10: kartu laporan -->
+    <div class="card" id="card">
+      <div class="head">
+        <span class="ttl"><img src="assets/brand/mark.png" alt=""><span class="t" id="cardTitle">Your GTM report</span></span>
+        <span class="ex">Example output</span>
+      </div>
+
+      <div class="pane" id="market">
+        <div class="bar-row"><div class="lab"><b>Total market</b><s>Mapped</s></div><div class="track"><i class="fill" style="width:92%"></i></div></div>
+        <div class="bar-row"><div class="lab"><b>Serviceable market</b><s>Mapped</s></div><div class="track"><i class="fill" style="width:64%"></i></div></div>
+        <div class="bar-row"><div class="lab"><b>Reachable ICP</b><s class="on">Priority</s></div><div class="track"><i class="fill" style="width:36%"></i></div></div>
+        <div id="move"><div class="k">The first move</div><div class="v">Go narrow on the reachable slice. One segment, one message, for the first month.</div></div>
+      </div>
+
+      <div class="pane" id="sim">
+        <div class="grp">
+          <div class="g"><div class="kk"><i style="background:#c9c9d1"></i>Dismiss</div><div class="n" data-n="46">0</div></div>
+          <div class="g"><div class="kk"><i style="background:rgba(54,99,255,.30)"></i>Curious</div><div class="n" data-n="62">0</div></div>
+          <div class="g"><div class="kk"><i style="background:rgba(54,99,255,.62)"></i>Interested</div><div class="n" data-n="58">0</div></div>
+          <div class="g"><div class="kk"><i style="background:#3663ff"></i>Ready to act</div><div class="n" data-n="34">0</div></div>
+        </div>
+        <div class="stats">
+          <div><div class="kk">Message clarity</div><div class="n" data-n="64" data-suffix="%">0%</div></div>
+          <div><div class="kk">Likely action intent</div><div class="n" data-n="48" data-suffix="%">0%</div></div>
+          <div><div class="kk">Main friction</div><div class="n" style="font-size:34px;font-weight:400">unclear value</div></div>
+        </div>
+        <div class="note">AI-modeled buyer reactions based on the supplied evidence. This is not a survey of real people.</div>
+      </div>
+
+      <div class="pane" id="comp">
+        <div class="cards">
+          <div class="cc on">
+            <div class="hd"><span class="av">A</span><span class="vf">Verified</span></div>
+            <div class="nm">Comparable company A</div>
+            <div class="st">
+              <div><div class="kk">Monthly revenue</div><div class="n" data-n="48" data-prefix="$" data-suffix="K">$0K</div></div>
+              <div><div class="kk">30 day growth</div><div class="n up" data-n="12" data-prefix="+" data-suffix="%">+0%</div></div>
+            </div>
+            <div class="rv"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sc">4.6</span><span class="ct" data-n="212" data-suffix=" reviews">0 reviews</span></div>
+          </div>
+          <div class="cc">
+            <div class="hd"><span class="av">B</span><span class="vf">Verified</span></div>
+            <div class="nm">Comparable company B</div>
+            <div class="st">
+              <div><div class="kk">Monthly revenue</div><div class="n" data-n="31" data-prefix="$" data-suffix="K">$0K</div></div>
+              <div><div class="kk">30 day growth</div><div class="n up" data-n="7" data-prefix="+" data-suffix="%">+0%</div></div>
+            </div>
+            <div class="rv"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span><span class="sc">4.2</span><span class="ct" data-n="96" data-suffix=" reviews">0 reviews</span></div>
+          </div>
+          <div class="cc">
+            <div class="hd"><span class="av">C</span><span class="vf">Verified</span></div>
+            <div class="nm">Comparable company C</div>
+            <div class="st">
+              <div><div class="kk">Monthly revenue</div><div class="n" data-n="19" data-prefix="$" data-suffix="K">$0K</div></div>
+              <div><div class="kk">30 day growth</div><div class="n up" data-n="21" data-prefix="+" data-suffix="%">+0%</div></div>
+            </div>
+            <div class="rv"><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span><span class="sc">4.8</span><span class="ct" data-n="54" data-suffix=" reviews">0 reviews</span></div>
+          </div>
+        </div>
+        <div class="note">Example figures. Real ones are read from public revenue and review sources, and the companies are named.</div>
+      </div>
+
+      <div class="pane" id="where">
+        <div class="chan on"><i class="ic"><img src="assets/logos/linkedin.svg" alt=""></i><div class="tx"><div class="nm">LinkedIn</div><div class="rs">Your buyers post, hire and compare here every week</div></div><span class="fit">Start here</span></div>
+        <div class="chan"><i class="ic"><img src="assets/logos/google.svg" alt=""></i><div class="tx"><div class="nm">Search</div><div class="rs">Comparison queries in your category already have volume</div></div><span class="fit">High intent</span></div>
+        <div class="chan"><i class="ic"><img src="assets/logos/reddit.svg" alt=""></i><div class="tx"><div class="nm">Reddit</div><div class="rs">Buyers research here long before they contact anyone</div></div><span class="fit">Buyer research</span></div>
+        <div class="chan"><i class="ic"><img src="assets/logos/slack.svg" alt=""></i><div class="tx"><div class="nm">Founder communities</div><div class="rs">Slack and Discord rooms where peers ask for recommendations</div></div><span class="fit">Warm intro</span></div>
+        <div id="subs">
+          <div class="hd"><img src="assets/logos/reddit.svg" alt=""><span class="k">The subreddits to be in</span></div>
+          <div class="row">
+            <span><b>r/</b>SaaS</span><span><b>r/</b>startups</span><span><b>r/</b>Entrepreneur</span>
+            <span><b>r/</b>B2BSaaS</span><span><b>r/</b>marketing</span><span><b>r/</b>YCombinator</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="pane" id="who">
+        <div class="who on"><span class="av">AL</span><div><div class="nm">VP Growth</div><div class="rl">Owns the number, signs the contract</div></div><span class="bd">Best entry</span></div>
+        <div class="who"><span class="av">MK</span><div><div class="nm">Head of Content</div><div class="rl">Feels the problem first, brings you in</div></div><span class="bd">Champion</span></div>
+        <div class="who"><span class="av">RO</span><div><div class="nm">Revenue Ops</div><div class="rl">Checks the tooling, can block or clear it</div></div><span class="bd">Influencer</span></div>
+        <div class="note" style="margin-top:26px">Filter by title, headcount and region, so the list is a hundred names and not a hundred thousand.</div>
+      </div>
+
+      <div class="pane" id="plan">
+        <div class="wk first"><span class="n">Week 1</span><span class="v">Rewrite the homepage around the reachable segment</span></div>
+        <div class="wk"><span class="n">Week 2</span><span class="v">Publish one comparison page and one proof post</span></div>
+        <div class="wk"><span class="n">Week 3</span><span class="v">Twenty LinkedIn conversations with VPs of Growth</span></div>
+        <div class="wk"><span class="n">Week 4</span><span class="v">Answer ten real threads in r/SaaS and r/B2BSaaS</span></div>
+      </div>
+    </div>
+
+    <!-- momen istimewa -->
+    <div id="dots"></div>
+
+    <!-- penutup: tanda lahir dari kartu, di atas klip find yang sama -->
+    <video class="clip" id="clipB" muted playsinline preload="auto" poster="assets/find-bg-poster.jpg">
+      <source src="assets/find-bg.mp4" type="video/mp4">
+    </video>
+    <i id="endveil"></i>
+    <i id="seed"></i>
+    <div id="end">
+      <img class="mark" src="assets/brand/mark.png" alt="">
+      <div class="wm">Finder</div>
+      <div class="lockrow"><span class="lock"><span class="by">by</span><img src="assets/brand/wordmark-black.png" alt="Ekos"><span class="labs">LABS</span></span></div>
+      <div class="cta"><b>Free of cost</b><s></s><u>ekoslabs.com/find</u></div>
+    </div>
+
+    <svg id="cursor" viewBox="0 0 45 56"><path d="M3 3 L4 45 L15 33 L25 52 L34 47 L23 29 L41 29Z" fill="#fff" stroke="#0a0a0c" stroke-width="3"/></svg>
+  </div>
+</div>
+
+<div id="ui">
+  <button id="btn-play">Pause</button><button id="btn-restart">Restart</button>
+  <input id="scrub" type="range" min="0" max="1000" value="0">
+  <span id="clock">0.00s</span>
+</div>
+
+<script>
+/* =======================================================================
+   Semua gerak adalah fungsi murni dari tl.time() (Hukum #2). Tidak ada
+   Date.now(), tidak ada Math.random() di jalur render: keacakan tata letak
+   memakai PRNG berbenih supaya export frame-by-frame identik tiap kali.
+   ======================================================================= */
+const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
+const W=1920,H=1080;
+const Q=new URLSearchParams(location.search);
+
+/* ---- motion blur berarah ---- */
+const defs=$('#filters defs'); let fc=0;
+function makeBlur(){const id='mb'+(fc++),NS='http://www.w3.org/2000/svg';
+  const f=document.createElementNS(NS,'filter');f.id=id;
+  f.setAttribute('x','-70%');f.setAttribute('y','-70%');f.setAttribute('width','240%');f.setAttribute('height','240%');
+  const g=document.createElementNS(NS,'feGaussianBlur');g.setAttribute('stdDeviation','0 0');
+  f.appendChild(g);defs.appendChild(f);return{url:`url(#${id})`,node:g};}
+function blurTween(tl,targets,at,from,to,dur,{ease='power3.out',ax=1,ay=.08}={}){
+  const b=makeBlur(),o={v:from};
+  tl.set(targets,{filter:b.url},at);
+  tl.to(o,{v:to,duration:dur,ease,onUpdate(){b.node.setAttribute('stdDeviation',`${(o.v*ax).toFixed(2)} ${(o.v*ay).toFixed(2)}`);}},at);
+  tl.set(targets,{filter:'none'},at+dur);}
+const VERT={ax:.1,ay:1};
+
+/* ---- split per kata/huruf ---- */
+function splitChars(el){
+  const html=el.innerHTML;
+  const frag=document.createElement('div');frag.innerHTML=html;
+  const words=[];let out=[];
+  el.textContent='';
+  const walk=node=>{
+    if(node.nodeType===3){
+      node.textContent.split(' ').forEach((w,i,arr)=>{
+        if(w===''&&arr.length>1)return;
+        const wr=document.createElement('span');wr.className='wd';
+        for(const c of w){const s=document.createElement('span');s.className='ch';s.textContent=c;wr.appendChild(s);out.push(s);}
+        words.push(wr);el.appendChild(wr);
+        const sp=document.createElement('span');sp.className='ch';sp.innerHTML='&nbsp;';el.appendChild(sp);out.push(sp);
+      });
+    }else{
+      const clone=node.cloneNode(false);
+      const wr=document.createElement('span');wr.className='wd';
+      node.textContent.split('').forEach(c=>{const s=document.createElement('span');s.className='ch';
+        if(c===' ')s.innerHTML='&nbsp;'; else s.textContent=c;
+        clone.appendChild(s);out.push(s);});
+      wr.appendChild(clone);words.push(wr);el.appendChild(wr);
+      const sp=document.createElement('span');sp.className='ch';sp.innerHTML='&nbsp;';el.appendChild(sp);out.push(sp);
+    }
+  };
+  [...frag.childNodes].forEach(walk);
+  return{chars:out,words};
+}
+
+/* ---- PRNG berbenih ---- */
+let _s=1337; const rnd=()=>{_s=(_s*1664525+1013904223)%4294967296;return _s/4294967296;};
+
+/* ---- 200 titik simulasi audiens ---- */
+const DOTS=[];{
+  const layer=$('#dots'),COLS=20,ROWS=10,GX=78,GY=64;
+  const x0=W/2-(COLS-1)*GX/2, y0=H/2-(ROWS-1)*GY/2;
+  const TONE=['#c9c9d1','rgba(54,99,255,.30)','rgba(54,99,255,.62)','#3663ff'];
+  const SIZE=[46,62,58,34];
+  for(let i=0;i<200;i++){
+    const el=document.createElement('i');layer.appendChild(el);
+    let g=0,n=0;for(let k=0;k<4;k++){n+=SIZE[k];if(i<n){g=k;break;}}
+    DOTS.push({el,gx:x0+(i%COLS)*GX,gy:y0+Math.floor(i/COLS)*GY,
+      sx:960+(rnd()-.5)*220, sy:540+(rnd()-.5)*140, tone:TONE[g], d:rnd()});
+  }
+}
+
+/* ---- rig kamera: skala + titik fokus, tepi dunia tak pernah tersingkap ---- */
+const world=$('#world');
+const CAM={s:1,fx:W/2,fy:H/2};
+const shot=(at,dur,s,fx,fy,ease='power2.inOut')=>tl.to(CAM,{s,fx,fy,duration:dur,ease},at);
+const cutTo=(at,s,fx,fy)=>tl.set(CAM,{s,fx,fy},at);
+function applyCam(t){
+  const s=CAM.s*(1+.005*(.5+.5*Math.sin(t*.5)));      /* napas: selalu >= 1 */
+  let tx=W/2-CAM.fx*s, ty=H/2-CAM.fy*s;
+  tx=Math.min(0,Math.max(W-W*s,tx)); ty=Math.min(0,Math.max(H-H*s,ty));
+  world.style.transform=`translate(${tx}px,${ty}px) scale(${s})`;
+}
+
+/* ---- latar hidup ---- */
+const g1=$('#g1'),g2=$('#g2'),hair=$('#hair'),turb=$('#turb');
+function applyBg(t){
+  g1.style.transform=`translate(${Math.sin(t*.13)*90}px,${Math.cos(t*.11)*64}px)`;
+  g2.style.transform=`translate(${Math.sin(t*.09+2)*-110}px,${Math.cos(t*.12+1)*-70}px)`;
+  hair.style.transform=`translate(${(t*16)%420-210}px,${Math.sin(t*.2)*26}px)`;
+  turb.setAttribute('baseFrequency',(0.84+Math.sin(t*.7)*0.02).toFixed(3));
+}
+
+/* =======================================================================
+   TIMELINE — 11 babak, tanpa cut keras, semua perpindahan dibawa UI
+   ======================================================================= */
+const DURATION=59.0;
+const tl=gsap.timeline({paused:true});
+
+/* pintu teks: dua adegan berturut-turut tidak memakai pintu yang sama */
+const SAY={};
+['s1','s2','s3','s4','s5','s6','s7','s8'].forEach(id=>{const el=$('#'+id),h=$('.txt',el);SAY[id]={el,h,...splitChars(h)};});
+const inWords=(id,at,{dur=.62,st=.085}={})=>{const s=SAY[id];
+  tl.set(s.el,{autoAlpha:1},at); tl.set(s.chars,{opacity:1},at);
+  tl.fromTo(s.words,{opacity:0,yPercent:42,color:'#96969f'},
+    {opacity:1,yPercent:0,color:'#0a0a0c',duration:dur,ease:'power4.out',stagger:st,immediateRender:false},at);
+  blurTween(tl,s.h,at,16,0,dur+st*3,VERT);};
+const inUp=(id,at,{dur=.85,st=.02}={})=>{const s=SAY[id];
+  tl.set(s.el,{autoAlpha:1},at);
+  tl.fromTo(s.chars,{opacity:0,yPercent:70,scaleY:1.4},{opacity:1,yPercent:0,scaleY:1,duration:dur,ease:'power4.out',stagger:st,immediateRender:false},at);
+  blurTween(tl,s.h,at,28,0,dur,VERT);};
+const inMask=(id,at,{dur=.9}={})=>{const s=SAY[id];
+  tl.set(s.el,{autoAlpha:1},at); tl.set(s.chars,{opacity:1,yPercent:0,scaleY:1},at);
+  tl.fromTo(s.h,{clipPath:'inset(0% 100% 0% 0%)'},{clipPath:'inset(0% 0% 0% 0%)',duration:dur,ease:'power3.inOut',immediateRender:false},at);
+  tl.set(s.h,{clipPath:'none'},at+dur);};
+const inDepth=(id,at,{dur=.95,st=.016}={})=>{const s=SAY[id];
+  tl.set(s.el,{autoAlpha:1},at);
+  tl.fromTo(s.chars,{opacity:0,scale:2.1},{opacity:1,scale:1,duration:dur,ease:'expo.out',stagger:{each:st,from:'center'},immediateRender:false},at);
+  blurTween(tl,s.h,at,18,0,dur,{ease:'expo.out',ax:1,ay:1});};
+/* meredup lalu berganti */
+const dimOut=(id,at,{dur=.5}={})=>{const s=SAY[id];
+  tl.to(s.words,{color:'#96969f',duration:dur*.45,ease:'sine.out'},at);
+  tl.to(s.el,{autoAlpha:0,y:-26,duration:dur,ease:'power2.in'},at+dur*.25);
+  blurTween(tl,s.h,at+dur*.25,0,26,dur,{ease:'power2.in',...VERT});};
+
+/* satu gagasan per pane: yang lama menggulung ke atas, yang baru naik dari bawah */
+const swapPane=(out,into,at,{gap=.45}={})=>{
+  tl.to(out,{autoAlpha:0,y:-40,duration:.5,ease:'power2.in'},at);
+  tl.fromTo(into,{autoAlpha:0,y:46},{autoAlpha:1,y:0,duration:.68,ease:'power3.out',immediateRender:false},at+gap);
+};
+
+/* penghitung angka deterministik */
+const count=(el,at,dur=.9)=>{
+  const n=+el.dataset.n, pre=el.dataset.prefix||'', suf=el.dataset.suffix||'', o={v:0};
+  tl.fromTo(o,{v:0},{v:n,duration:dur,ease:'power2.out',immediateRender:false,
+    onUpdate(){el.textContent=pre+Math.round(o.v)+suf;}},at);
+};
+
+/* keadaan awal */
+tl.set(['#site','#bar','#card','#end','#seed','#jev'],{autoAlpha:0},0);
+tl.set('.say',{autoAlpha:0},0);
+tl.set(CAM,{s:1,fx:W/2,fy:H/2},0);
+
+/* ---------- BABAK 1 (0.0 - 4.6) : ekoslabs.com sedang dibaca ----------
+   Pembuka in media res: frame pertama sudah close-up di halaman nyata, garis baca sudah berjalan. */
+cutTo(0,1.55,800,430);
+tl.set('#site',{autoAlpha:1},0);
+tl.fromTo('#scanline',{top:40,opacity:0},{opacity:1,duration:.3,immediateRender:false},0);
+tl.to('#scanline',{top:700,duration:3.4,ease:'none'},0);
+tl.to('#scanline',{opacity:0,duration:.35},3.2);
+/* yang ditemukan, satu per satu saat garis melewatinya */
+[['#f1','#t1',.75],['#f2','#t2',1.65],['#f3','#t3',2.45]].forEach(([f,t,at])=>{
+  tl.fromTo(f,{scaleX:0},{scaleX:1,duration:.5,ease:'power3.out',immediateRender:false},at);
+  tl.fromTo(t,{opacity:0,x:-18},{opacity:1,x:0,duration:.42,ease:'power3.out',immediateRender:false},at+.2);
+});
+shot(1.5,2.6,1.06,930,505);                    /* mundur pelan dan cukup lebar: ketiga temuan harus muat */
+
+/* ---------- BABAK 2 (4.4 - 7.4) : klaim ----------
+   Halaman mengecil ke atas dan menjadi konteks; kalimat lahir di bawahnya. */
+shot(4.4,1.3,1,W/2,H/2);
+tl.to('#site',{scale:.40,x:0,y:-358,transformOrigin:'50% 50%',duration:1.2,ease:'power3.inOut'},4.4);
+tl.to(['#f1','#f2','#f3','#t1','#t2','#t3'],{opacity:0,duration:.45},4.4);
+inWords('s1',5.25);
+tl.to('#site',{y:-370,duration:2.4,ease:'sine.inOut'},5.3);   /* tidak pernah diam */
+
+/* ---------- BABAK 3 (7.4 - 12.2) : cara — bar input ----------
+   Bar dirakit di bawah kalimat, URL asli diketik, tombol ditekan. */
+dimOut('s1',7.35);
+tl.fromTo('#bar',{autoAlpha:0,y:40,scale:.94},{autoAlpha:1,y:0,scale:1,duration:.7,ease:'power3.out',immediateRender:false},7.55);
+inMask('s2',7.95);
+{const el=$('#url'),str='ekoslabs.com',o={i:0};
+ tl.to(el,{color:'#0a0a0c',duration:.2},8.5);
+ tl.fromTo(o,{i:0},{i:str.length,duration:1.4,ease:'none',immediateRender:false,
+   onUpdate(){el.textContent=str.slice(0,Math.round(o.i))||' ';}},8.55);
+ tl.fromTo('#caret',{opacity:1},{opacity:1,duration:1.5,immediateRender:false},8.45);
+ tl.to('#caret',{opacity:0,duration:.2},10.1);}
+dimOut('s2',9.95,{dur:.45});
+shot(10.15,.95,1.42,900,658);                   /* medium close-up: yang sedang diketik */
+tl.fromTo('#cursor',{autoAlpha:0,x:880,y:900},{autoAlpha:1,x:1180,y:700,duration:.8,ease:'power2.out',immediateRender:false},10.2);
+shot(10.6,.9,1.68,1230,658);                    /* dekat ke tombol sebelum klik */
+tl.to('#cursor',{x:1262,y:672,duration:.5,ease:'power2.inOut'},10.95);
+tl.to('#btn',{scale:.94,duration:.12,ease:'power2.in'},11.55);
+tl.to('#btn',{scale:1,duration:.34,ease:'back.out(2.4)'},11.67);
+tl.to('#cursor',{scale:.9,duration:.12},11.55); tl.to('#cursor',{scale:1,duration:.3},11.67);
+tl.fromTo('#ripple',{left:470,top:596,width:980,height:124,opacity:.9,scale:1},
+  {opacity:0,scale:1.06,duration:.8,ease:'power2.out',immediateRender:false},11.6);
+tl.to('#cursor',{autoAlpha:0,duration:.3},12.1);
+
+/* ---------- BABAK 4 (12.2 - 16.4) : cara — bukti terkumpul ----------
+   Bar menyusut jadi sumber; bukti terbang masuk dan merapat; JEV menilai. */
+shot(12.1,1.3,1,W/2,H/2);
+tl.to('#site',{scale:.30,y:-360,opacity:.35,duration:.95,ease:'power2.inOut'},12.2);
+tl.to('#bar',{scale:.62,y:-40,duration:1.0,ease:'power3.inOut'},12.3);
+const CHIPS=[['#c1',12.75],['#c2',13.03],['#c3',13.27],['#c4',13.51],['#c5',13.75],['#c6',13.99]];
+CHIPS.forEach(([sel,at],i)=>{
+  const dx=(i%2?1:-1)*(110+i*22), dy=(i<3?-60:60);
+  tl.fromTo(sel,{autoAlpha:0,x:dx,y:dy,scale:.92},{autoAlpha:1,x:0,y:0,scale:1,duration:.72,ease:'power3.out',immediateRender:false},at);
+  tl.to(sel+' i',{backgroundColor:'#3663ff',duration:.3,ease:'sine.out'},at+.58);   /* JEV menyalakan tandanya */
+});
+tl.fromTo('#jev',{autoAlpha:0,y:24},{autoAlpha:1,y:0,duration:.6,ease:'power3.out',immediateRender:false},14.6);
+/* semua bukti tersedot ke tengah: kartu lahir dari mereka */
+tl.to(['.chip'],{x:(i,el)=>(960-(parseFloat(el.style.left)+el.offsetWidth/2))*.9,
+                 y:(i,el)=>(540-(parseFloat(el.style.top)+33))*.9,
+                 scale:.5,autoAlpha:0,duration:.85,ease:'power2.in',stagger:.035},15.6);
+tl.to(['#jev','#bar','#site'],{autoAlpha:0,scale:.7,duration:.6,ease:'power2.in'},15.85);
+
+/* ---------- BABAK 5 (16.2 - 22.2) : hasil 1 — kartu laporan mekar ----------
+   Kartu datang dari kedalaman, pasar mengisi, langkah pertama muncul. */
+inDepth('s3',16.2);
+tl.fromTo('#card',{autoAlpha:0,scale:.42,rotateY:-26,transformOrigin:'50% 50%'},
+  {autoAlpha:1,scale:1,rotateY:0,duration:1.15,ease:'power3.out',immediateRender:false},16.65);
+tl.set('#card',{transformPerspective:1600},16.6);
+tl.fromTo('#market',{autoAlpha:0},{autoAlpha:1,duration:.4,immediateRender:false},17.2);
+tl.fromTo('#market .fill',{scaleX:0},{scaleX:1,duration:1.0,ease:'power3.out',stagger:.16,immediateRender:false},17.4);
+tl.fromTo('#move',{autoAlpha:0,y:26},{autoAlpha:1,y:0,duration:.7,ease:'power3.out',immediateRender:false},18.9);
+dimOut('s3',18.6,{dur:.5});
+shot(17.3,2.8,1.12,960,470);                     /* push pelan, hold tidak mati */
+shot(20.4,1.5,1,W/2,H/2);
+
+/* ---------- BABAK 6 (22.2 - 28.9) : ✦ momen istimewa — 200 titik ----------
+   Titik keluar dari kartu, menyebar seluruh frame, mengelompok jadi empat reaksi,
+   lalu runtuh kembali ke dalam kartu yang kini memperlihatkan panel simulasi. */
+inUp('s4',22.2,{dur:.7,st:.016});
+tl.to('#card',{scale:.82,y:34,duration:.9,ease:'power2.inOut'},22.3);
+tl.to('#market',{autoAlpha:0,duration:.4},22.4);
+DOTS.forEach((d,i)=>{
+  tl.set(d.el,{x:d.sx-11,y:d.sy-11,backgroundColor:'#c4c4cd',opacity:0},22.6);
+  tl.to(d.el,{opacity:1,duration:.25,ease:'none'},22.65+d.d*.35);
+  tl.to(d.el,{x:d.gx-11,y:d.gy-11,duration:1.15,ease:'power3.out'},22.7+d.d*.5);
+  tl.to(d.el,{backgroundColor:d.tone,duration:.45,ease:'sine.out'},23.9+(i%20)*.018+Math.floor(i/20)*.03);
+});
+tl.to('#card',{autoAlpha:.12,duration:.5},23.1);
+/* klip find muncul DI BELAKANG titik: titik abstrak duduk di atas orang sungguhan */
+tl.fromTo('#clipA',{opacity:0},{opacity:.27,duration:1.0,ease:'sine.out',immediateRender:false},22.9);
+tl.to('#clipA',{opacity:0,duration:.85,ease:'sine.in'},25.6);
+dimOut('s4',25.5,{dur:.5});
+/* runtuh kembali ke kartu; panel simulasi sudah terisi di dalamnya */
+tl.to('#card',{autoAlpha:1,scale:1,y:0,duration:.8,ease:'power3.out'},25.85);
+DOTS.forEach((d,i)=>{
+  tl.to(d.el,{x:960-11,y:540-11,scale:.35,opacity:0,duration:.75,ease:'power2.in'},25.75+(i%20)*.012);
+});
+tl.fromTo('#sim',{autoAlpha:0,y:30},{autoAlpha:1,y:0,duration:.6,ease:'power3.out',immediateRender:false},26.3);
+$$('#sim .n[data-n]').forEach((el,i)=>count(el,26.45+i*.09));
+shot(26.3,1.9,1.08,960,600);
+shot(28.4,1.2,1,W/2,H/2);
+
+/* ---------- BABAK 7 (28.9 - 35.6) : hasil 2 — berapa yang dihasilkan pesaing, dan ulasannya ----
+   Isi terkunci di situs, ditampilkan di sini. Nama pesaing tidak disebut; angkanya contoh. */
+inWords('s5',28.9,{dur:.58,st:.075});
+swapPane('#sim','#comp',29.5);
+tl.fromTo('#comp .cc',{opacity:0,y:34,scale:.96},{opacity:1,y:0,scale:1,duration:.7,ease:'power3.out',stagger:.16,immediateRender:false},30.15);
+$$('#comp .st .n[data-n]').forEach((el,i)=>count(el,30.7+i*.08,.85));
+$$('#comp .rv .ct[data-n]').forEach((el,i)=>count(el,31.5+i*.1,.7));
+shot(30.3,2.4,1.13,960,520);
+shot(33.0,1.7,1,W/2,H/2);
+dimOut('s5',33.9,{dur:.5});
+
+/* ---------- BABAK 8 (35.1 - 42.2) : hasil 3 — kanal DENGAN alasannya, lalu subreddit-nya ----
+   Ini yang dulu terpotong. Tiap kanal membawa alasannya, dan komunitasnya disebut satu per satu. */
+inMask('s6',35.1,{dur:.9});
+swapPane('#comp','#where',35.7);
+tl.fromTo('#where .chan',{opacity:0,x:-26},{opacity:1,x:0,duration:.6,ease:'power3.out',stagger:.24,immediateRender:false},36.4);
+tl.fromTo('#subs .k',{opacity:0,y:18},{opacity:1,y:0,duration:.5,ease:'power3.out',immediateRender:false},38.5);
+tl.fromTo('#subs .row span',{opacity:0,y:20,scale:.94},{opacity:1,y:0,scale:1,duration:.5,ease:'back.out(1.6)',stagger:.1,immediateRender:false},38.8);
+shot(36.6,2.4,1.15,880,490);                     /* dekat ke baris kanal */
+shot(39.4,2.2,1.15,1000,660);                    /* turun ke deretan subreddit */
+dimOut('s6',41.0,{dur:.5});
+shot(41.8,1.2,1,W/2,H/2);
+
+/* ---------- BABAK 9 (42.0 - 46.4) : hasil 4 — siapa yang bisa bilang ya ---------- */
+inDepth('s7',42.0,{dur:.9});
+swapPane('#where','#who',42.6);
+tl.fromTo('#who .who',{opacity:0,x:-24},{opacity:1,x:0,duration:.55,ease:'power3.out',stagger:.2,immediateRender:false},43.3);
+tl.fromTo('#who .note',{opacity:0},{opacity:1,duration:.5,immediateRender:false},44.3);
+shot(43.3,2.3,1.1,960,510);
+dimOut('s7',45.5,{dur:.5});
+shot(45.7,1.2,1,W/2,H/2);
+
+/* ---------- BABAK 10 (46.2 - 54.3) : hasil 5 — empat minggu, tiap minggu diberi waktu dibaca ----
+   Dulu tiga minggu dan terpotong. Sekarang empat, dan pane ditahan sampai 52.8. */
+inUp('s8',46.2,{dur:.8,st:.018});
+swapPane('#who','#plan',46.8);
+tl.fromTo('#plan .wk',{opacity:0,x:-28},{opacity:1,x:0,duration:.6,ease:'power3.out',stagger:.78,immediateRender:false},47.4);
+dimOut('s8',52.4,{dur:.5});
+/* menyusut: kartu -> pil -> titik */
+tl.to('#card .pane',{autoAlpha:0,duration:.35,ease:'power2.in'},52.8);
+tl.to('#card .head',{autoAlpha:0,duration:.3,ease:'power2.in'},52.8);
+tl.to('#card',{left:770,top:482,width:380,height:116,borderRadius:99,duration:.62,ease:'power3.inOut'},52.85);
+tl.to('#card',{backgroundColor:'#e7ecff',duration:.45,ease:'sine.inOut'},52.95);
+tl.to('#card',{left:944,top:524,width:32,height:32,borderRadius:99,duration:.55,ease:'power3.inOut'},53.5);
+tl.to('#card',{backgroundColor:'#3663ff',boxShadow:'0 0 0 0 rgba(0,0,0,0)',duration:.35},53.75);
+
+/* ---------- BABAK 11 (54.3 - 59.0) : penutup — tanda lahir dari kartu ----------
+   Titik itu tumbuh menjadi tanda Ekos. Tidak ada ajakan memesan panggilan: hanya
+   nama produk, siapa yang membuatnya, dan di mana ia berada. */
+tl.to('#card',{autoAlpha:0,duration:.25},54.3);
+tl.fromTo('#seed',{autoAlpha:1,scale:1},{scale:4.6,autoAlpha:0,duration:.6,ease:'power2.out',immediateRender:false},54.25);
+tl.fromTo('#end',{autoAlpha:0,scale:.9},{autoAlpha:1,scale:1,duration:.7,ease:'power3.out',immediateRender:false},54.45);
+tl.fromTo('#end .mark',{scale:.2,opacity:0},{scale:1,opacity:1,duration:.75,ease:'back.out(1.7)',immediateRender:false},54.35);
+tl.fromTo('#end .wm',{opacity:0,y:34},{opacity:1,y:0,duration:.7,ease:'power4.out',immediateRender:false},54.85);
+tl.fromTo('#end .lockrow',{opacity:0,y:20},{opacity:1,y:0,duration:.55,ease:'power3.out',immediateRender:false},55.1);
+tl.fromTo('#end .cta',{opacity:0,y:28},{opacity:1,y:0,duration:.65,ease:'power3.out',immediateRender:false},55.3);
+/* klip yang sama kembali, kali ini sebagai latar penutup — persis latar halaman find */
+tl.fromTo('#clipB',{opacity:0},{opacity:.17,duration:1.3,ease:'sine.out',immediateRender:false},54.4);
+tl.fromTo('#endveil',{opacity:0},{opacity:1,duration:1.3,ease:'sine.out',immediateRender:false},54.4);
+shot(54.35,3.8,1.05,960,540);                    /* penutup ditahan tetap diberi push pelan */
+tl.to({},{duration:.01},DURATION);
+
+/* ============ PEREKAT ============ */
+const stage=$('#stage');
+const fit=()=>{const s=Math.min(innerWidth/W,innerHeight/H);
+  stage.style.transform=`translate(-50%,-50%) scale(${s})`;};
+addEventListener('resize',fit); fit();
+
+/* judul kartu = fungsi murni dari t */
+const cardTitle=$('#cardTitle');
+const TITLES=[[0,'Your GTM report'],
+              [25.8,'Your report · Audience simulation'],
+              [29.9,'Your report · Competitor benchmark'],
+              [36.1,'Your report · Where they are'],
+              [43.0,'Your report · Who can say yes'],
+              [47.2,'Your report · A focused first month']];
+function applyTitle(t){let v=TITLES[0][1];for(const[at,x]of TITLES)if(t>=at)v=x;
+  if(cardTitle.textContent!==v)cardTitle.textContent=v;}
+/* ---- klip video: waktunya fungsi murni dari t, supaya export identik ---- */
+const CLIPS=[{el:$('#clipA'),at:22.6,dur:3.9,off:0.5},
+             {el:$('#clipB'),at:54.2,dur:4.8,off:4.3}];
+const clipLocal=(c,t)=>c.off+Math.min(Math.max(t-c.at,0),c.dur);
+function applyClips(t){                       /* pemutaran langsung: biarkan klip berjalan sendiri */
+  for(const c of CLIPS){
+    const inside = t>=c.at && t<=c.at+c.dur;
+    if(inside){ if(c.el.paused){ try{c.el.currentTime=clipLocal(c,t);}catch(e){} c.el.play().catch(()=>{}); } }
+    else if(!c.el.paused) c.el.pause();
+  }
+}
+function render(t){applyCam(t);applyBg(t);applyTitle(t);if(!Q.has('clean'))applyClips(t);}
+const clock=$('#clock'),scrub=$('#scrub'),btn=$('#btn-play');
+let scrubbing=false;
+(function frame(){const t=tl.time();render(t);
+  clock.textContent=t.toFixed(2)+'s';
+  if(!scrubbing)scrub.value=String(t/DURATION*1000);
+  requestAnimationFrame(frame);})();
+
+const toggle=()=>{if(tl.paused()||tl.progress()>=1){if(tl.progress()>=1)tl.progress(0);tl.play();btn.textContent='Pause';}
+  else{tl.pause();btn.textContent='Play';}};
+btn.onclick=toggle;
+$('#btn-restart').onclick=()=>{tl.pause(0);tl.play();btn.textContent='Pause';};
+scrub.addEventListener('pointerdown',()=>{scrubbing=true;tl.pause();btn.textContent='Play';});
+addEventListener('pointerup',()=>scrubbing=false);
+scrub.addEventListener('input',()=>{tl.pause();tl.time(scrub.value/1000*DURATION);});
+addEventListener('keydown',e=>{if(e.code==='Space'){e.preventDefault();toggle();}
+  if(/^[rR]$/.test(e.key)){tl.pause(0);tl.play();}
+  if(/^[hH]$/.test(e.key))$('#ui').classList.toggle('on');});
+if(Q.has('debug'))$('#ui').classList.add('on');
+tl.eventCallback('onComplete',()=>{tl.play(0);});
+
+const seek=t=>{tl.pause();tl.time(Math.max(t,1e-4),false);
+  if(gsap.ticker.tick)gsap.ticker.tick();render(t);};
+/* export frame demi frame: setel currentTime tiap klip dan TUNGGU frame-nya siap */
+const seekFrame=async t=>{
+  seek(t);
+  await Promise.all(CLIPS.map(c=>new Promise(res=>{
+    const want=clipLocal(c,t);
+    if(!c.el.paused)c.el.pause();
+    if(Math.abs(c.el.currentTime-want)<0.0005)return res();
+    const done=()=>{c.el.removeEventListener('seeked',done);res();};
+    c.el.addEventListener('seeked',done);
+    try{c.el.currentTime=want;}catch(e){done();}
+    setTimeout(done,400);                       /* jaring pengaman, jangan sampai export menggantung */
+  })));
+};
+const clipsReady=()=>CLIPS.every(c=>c.el.readyState>=2);
+window.OPENER={tl,DURATION,seek,seekFrame,clipsReady,ready:false,W,H};
+document.fonts.ready.then(()=>{window.OPENER.ready=true;if(!Q.has('clean'))tl.play(0);});
+</script>
+</body>
+</html>

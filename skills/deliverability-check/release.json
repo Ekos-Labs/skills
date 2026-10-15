@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "deliverability-check",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "A shell with dig or nslookup (built in on macOS and Linux)"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "note": "Single source of truth for the Finder reel. The composition reads scenes/captions/typing; scripts/sound-design.py reads audio. Frames are 30fps, seconds are absolute.",
+  "fps": 30,
+  "durationInFrames": 1200,
+  "width": 1080,
+  "height": 1920,
+  "scenes": [
+    {
+      "name": "Hook / signals resolve into Finder",
+      "from": 0,
+      "to": 120
+    },
+    {
+      "name": "Input / one website field",
+      "from": 120,
+      "to": 276
+    },
+    {
+      "name": "Engine / JEV, AI, GTM data",
+      "from": 276,
+      "to": 456
+    },
+    {
+      "name": "Result / the report assembles",
+      "from": 456,
+      "to": 852
+    },
+    {
+      "name": "Payoff / one operating plan",
+      "from": 852,
+      "to": 1110
+    },
+    {
+      "name": "CTA / Finder by Ekos Labs",
+      "from": 1110,
+      "to": 1200
+    }
+  ],
+  "typing": {
+    "text": "yourcompany.com",
+    "startFrame": 26,
+    "stepFrames": 3.2,
+    "submitFrame": 108
+  },
+  "captions": [
+    {
+      "start": 0.6,
+      "end": 3.85,
+      "text": "Your next GTM move is hiding in plain sight."
+    },
+    {
+      "start": 4.5,
+      "end": 6.7,
+      "text": "Enter your website."
+    },
+    {
+      "start": 6.95,
+      "end": 9.0,
+      "text": "That is the whole input."
+    },
+    {
+      "start": 9.5,
+      "end": 12.0,
+      "text": "JEV + AI + years of GTM data."
+    },
+    {
+      "start": 12.3,
+      "end": 14.9,
+      "text": "One judgment layer over every claim."
+    },
+    {
+      "start": 15.35,
+      "end": 17.2,
+      "text": "Your GTM report. In minutes."
+    },
+    {
+      "start": 17.5,
+      "end": 19.4,
+      "text": "What to do in your market."
+    },
+    {
+      "start": 19.7,
+      "end": 21.6,
+      "text": "How your ICP reacts, modelled."
+    },
+    {
+      "start": 21.9,
+      "end": 23.8,
+      "text": "Which buyer to pursue first."
+    },
+    {
+      "start": 24.1,
+      "end": 26.0,
+      "text": "Who can say yes, and how to reach them."
+    },
+    {
+      "start": 26.3,
+      "end": 28.3,
+      "text": "The communities and channels that fit."
+    },
+    {
+      "start": 28.8,
+      "end": 31.1,
+      "text": "It lands as one operating plan."
+    },
+    {
+      "start": 31.4,
+      "end": 33.7,
+      "text": "One channel. One message. One proof point."
+    },
+    {
+      "start": 34.35,
+      "end": 36.8,
+      "text": "Find the signal. Move first."
+    },
+    {
+      "start": 37.5,
+      "end": 39.7,
+      "text": "Finder by Ekos Labs. Free of cost."
+    }
+  ],
+  "audio": {
+    "impacts": [
+      {
+        "at": 0.0,
+        "gain": 0.9
+      },
+      {
+        "at": 2.0,
+        "gain": 0.7
+      },
+      {
+        "at": 4.0,
+        "gain": 0.8
+      },
+      {
+        "at": 9.2,
+        "gain": 0.8
+      },
+      {
+        "at": 15.2,
+        "gain": 1.0
+      },
+      {
+        "at": 28.4,
+        "gain": 0.9
+      },
+      {
+        "at": 34.1,
+        "gain": 1.0
+      },
+      {
+        "at": 37.0,
+        "gain": 0.85
+      }
+    ],
+    "sweeps": [
+      {
+        "at": 1.55,
+        "dur": 1.15,
+        "gain": 0.55,
+        "dir": "up"
+      },
+      {
+        "at": 10.5,
+        "dur": 1.5,
+        "gain": 0.5,
+        "dir": "up"
+      },
+      {
+        "at": 15.25,
+        "dur": 0.95,
+        "gain": 0.45,
+        "dir": "down"
+      },
+      {
+        "at": 33.9,
+        "dur": 0.8,
+        "gain": 0.4,
+        "dir": "up"
+      }
+    ],
+    "ticks": [
+      9.65,
+      10.45,
+      11.25,
+      13.1,
+      17.4,
+      19.6,
+      21.8,
+      24.0,
+      26.2,
+      29.3,
+      30.1,
+      30.9,
+      31.7,
+      32.5
+    ],
+    "confirms": [
+      {
+        "at": 8.45,
+        "gain": 0.5
+      },
+      {
+        "at": 37.35,
+        "gain": 0.6
+      }
+    ],
+    "bed": [
+      {
+        "from": 0.0,
+        "to": 4.0,
+        "intensity": 0.35,
+        "root": 55.0,
+        "pulse": false,
+        "texture": 0.5
+      },
+      {
+        "from": 4.0,
+        "to": 9.2,
+        "intensity": 0.45,
+        "root": 55.0,
+        "pulse": true,
+        "texture": 0.3
+      },
+      {
+        "from": 9.2,
+        "to": 15.2,
+        "intensity": 0.6,
+        "root": 55.0,
+        "pulse": true,
+        "texture": 0.22
+      },
+      {
+        "from": 15.2,
+        "to": 28.4,
+        "intensity": 0.7,
+        "root": 61.74,
+        "pulse": true,
+        "texture": 0.16
+      },
+      {
+        "from": 28.4,
+        "to": 34.1,
+        "intensity": 0.62,
+        "root": 73.42,
+        "pulse": true,
+        "texture": 0.12
+      },
+      {
+        "from": 34.1,
+        "to": 37.0,
+        "intensity": 0.72,
+        "root": 82.41,
+        "pulse": false,
+        "texture": 0.08
+      },
+      {
+        "from": 37.0,
+        "to": 40.0,
+        "intensity": 0.5,
+        "root": 82.41,
+        "pulse": false,
+        "texture": 0.05
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "slug": "product-context",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Original Ekos instructions; no third-party skill files bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex; web access is optional"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

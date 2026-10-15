@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "customer-map",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "Optional: Firecrawl API key for deeper page reading"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "landing-page-builder",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "agent-native",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "The user's website code project (for example Next.js, Astro or plain HTML)"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

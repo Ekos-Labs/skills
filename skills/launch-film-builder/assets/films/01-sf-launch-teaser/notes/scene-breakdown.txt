@@ -1,0 +1,154 @@
+EKOS
+Launch Film — Scene Breakdown
+Shot-by-shot storytelling document, built to the Whop-teardown model — no narration, on-screen typography over music, real artefacts over stock footage.
+
+1. Structure at a Glance
+Six acts, twenty scenes, ending on a single held word. The architecture: precedent → institutional progress → peak human achievement → the AI shift → the doubt and reversal → the mark.
+Act
+Beats
+What it's doing
+I — The Precedent
+Stone Age → Wheel → Bulb → Wright Brothers → Relativity → Einstein
+Establishes: impossible things have always been built by hand
+II — Bull Pen Era
+1999 · engineers, doctors, scientists, world evolving
+Moves precedent into modern institutional progress
+III — The Giants
+Rocket ignition · Moon landing · Apple cash reserve · Zuckerberg
+Peak of human achievement — the ceiling, pre-AI
+IV — The Shift
+News broadcasts · Claude / GPT / Lovable / Cursor · "seconds" line
+AI enters — building compresses to prompts
+V — The Doubt
+Black screen · "built by prompts?" · "No" · trust/visibility/distribution
+The reversal — the film's real thesis
+VI — The Mark
+"ekos."
+Silent close
+2. Scene-by-Scene
+ACT I — The Precedent
+Six real artefacts, back to back, no text yet. Same device as the Whop film's five receipts (Minecraft, Kylie, Fred again..) — specific, recognizable proof beats an abstract claim.
+  SCENE 1   Stone Age   0:00–0:02  
+VISUAL
+Cave wall, torchlight, hand-stencil painting. Archival/documentary texture, not a reenactment — same treatment as real found footage, not a set.
+TEXT
+None. Let the image carry it.
+  SCENE 2   First Wheel   0:02–0:04  
+VISUAL
+A stone or wooden wheel in motion, close and tactile, grain visible.
+TEXT
+None.
+  SCENE 3   Light Bulb   0:04–0:06  
+VISUAL
+Filament bulb glowing in a dark room. Practical light source in frame, not a CGI glow.
+TEXT
+None.
+  SCENE 4   Wright Brothers — First Plane   0:06–0:08  
+VISUAL
+The Wright Flyer at Kitty Hawk, 1903 — the actual historical photograph, held a beat rather than cut fast.
+TEXT
+None.
+  SCENE 5   Relativity — The Formula   0:08–0:09.5  
+VISUAL
+E = mc² handwritten on a blackboard or paper, chalk dust visible, macro on the strokes.
+TEXT
+None.
+  SCENE 6   Albert Einstein   0:09.5–0:11.5  
+VISUAL
+Einstein himself — archival photograph, blackboard or desk, mid-thought rather than posed.
+TEXT
+None.
+This is where the sequence stops. Cut to black.
+ACT II — Bull Pen Era, 1999
+The film's first spoken structural device: a hard cut to black with the era name as the anchor, then a montage of the people actually doing the building — not more inventions, but the workforce behind modern progress.
+  SCENE 7   Black Screen — Title Card   0:11.5–0:13.5  
+VISUAL
+Full black frame, same treatment as the Whop film's single black-screen thesis card.
+TEXT
+Bull Pen Era — 1999
+  SCENE 8   Engineers, Doctors, Scientists   0:13.5–0:18  
+VISUAL
+A short run of period-accurate photographs — engineers at workstations, doctors in a lab or operating room, scientists at instruments. Real photographs, not stock-styled reenactments, cut at a steady, unhurried pace.
+TEXT
+None — the montage argues on its own, same way Whop's precedent artefacts do.
+NOTE
+This is where "the world evolving" plays out visually — treat it as a rhythm build, shots tightening slightly as the sequence moves toward the giants in Act III.
+ACT III — The Giants
+Peak of the pre-AI story. This is the emotional high point before the shift — treat the cutting and the audio as doing the work; text stays out of the way entirely.
+  SCENE 9   Rocket Ignition   0:18–0:20.5  
+VISUAL
+Booster ignition, real footage, ground-level or side-mount camera — the moment of lift, not the launch pad wide shot.
+TEXT
+None.
+  SCENE 10   Moon Landing — News Broadcast Behind It   0:20.5–0:23.5  
+VISUAL
+Rocket flying, with an archival news broadcast on the moon landing layered or cut behind/beside it — chyrons and network furniture left intact, same as Whop's CNBC clip. This is the film's "found footage, not authored" moment.
+TEXT
+None — let the real broadcast audio/text do the talking.
+  SCENE 11   Apple — Largest Cash Reserve   0:23.5–0:25.5  
+VISUAL
+Archival photo or footage tied to Apple's rise; if available, a period news clip or headline referencing the cash reserve milestone, treated the same way as the moon landing broadcast.
+TEXT
+None, unless sourced directly from a real headline — if so, treat it like Scene 1 of the earlier draft: an actual found headline, not a designed overlay.
+  SCENE 12   Zuckerberg — Youngest Billionaire   0:25.5–0:27.5  
+VISUAL
+Archival photo of a young Zuckerberg, or a period news clip referencing the milestone.
+TEXT
+None.
+NOTE
+Across Scenes 9–12, keep one continuous piece of music or score running underneath — the brief specifically calls for audio carrying this section while the cuts stay purely photographic. No narration, no text, just accumulation.
+ACT IV — The Shift
+This is where the film turns. Real news coverage of AI, followed by the actual tools, followed by the film's first full sentence.
+  SCENE 13   News Broadcasts — AI Builds Companies   0:27.5–0:30.5  
+VISUAL
+Real (or realistic) news broadcast footage/clips reporting on AI's ability to build a company from a single prompt — chyrons intact, same found-footage treatment as Act III.
+TEXT
+None — the news chyrons carry the claim.
+  SCENE 14   The Tools — Claude, GPT, Lovable, Cursor   0:30.5–0:34  
+VISUAL
+Screen recordings of each interface's prompt field — Claude, GPT, Lovable, Cursor — cut back-to-back, fast, real UI chrome left in. Mirrors the Whop typing sequence: multiple real interfaces, no narration, the sequence makes the argument.
+TEXT
+None during the cuts — save the line for the beat after.
+  SCENE 15   The Line   0:34–0:36.5  
+VISUAL
+Cut to flat background, clean and isolated — first time the film states something outright.
+TEXT
+AI can help us build anything in just a few seconds.
+ACT V — The Doubt
+The reversal. This is the film's real thesis, built exactly like Whop's black-frame turn — stated, undercut, and re-answered inside a tight, unhurried sequence.
+  SCENE 16   Black Screen   0:36.5–0:38  
+VISUAL
+Full black, same treatment as Scene 7 — this is the second and final time black is used, which is what makes it register as a structural marker rather than a transition.
+TEXT
+None yet — hold the black a beat before the question lands.
+  SCENE 17   The Question   0:38–0:40.5  
+VISUAL
+Same black frame, no cut.
+TEXT
+But are great companies built by prompts?
+  SCENE 18   The Answer   0:40.5–0:41.5  
+VISUAL
+Same shot, text replaces itself in place — no cut, exactly like the Whop "sky is falling → fly" moment.
+TEXT
+No.
+  SCENE 19   Trust, Visibility, Distribution — The Founders' Circle   0:41.5–0:45.5  
+VISUAL
+The line appears centered, with a circle of great founders' photographs forming around it — faces arranged in a ring, not a grid, closer to the Whop polaroid-wall logic than a corporate team slide.
+TEXT
+They are built by Trust, Visibility and Distribution.
+NOTE
+This is the film's answer to its own doubt — keep the founders' circle restrained (real, recognizable faces, modest count) rather than a dense collage; the earlier acts have already established density, so this beat should read as clarity, not another montage.
+ACT VI — The Mark
+  SCENE 20   ekos.   0:45.5–0:48  
+VISUAL
+Everything clears. Flat background, held in silence.
+TEXT
+ekos.
+NOTE
+Lowercase, with the period, exactly as written — treat it as the wordmark rather than a stylized logo lockup. Held a full 2–3 seconds in silence, same restraint as Whop giving its logo the last 4.7% of runtime and nothing else.
+3. Notes Carried Over From the Whop Model
+	•	No voiceover anywhere in this structure — every beat is either a real artefact (photo, broadcast, screen recording) or on-screen typography. If narration gets added later, it should replace at most one line, not become the spine.
+	•	Black is used exactly twice — Scene 7 ("Bull Pen Era — 1999") and Scene 16 onward (the doubt sequence). Reusing black more often than that flattens its impact; the whole reason it works in Act V is that the audience has only seen it once before.
+	•	Every historical or news beat (Acts I–IV) should use the real artefact — actual archival photos, actual broadcast footage, actual tool interfaces — not recreations. This is the single biggest driver of why the Whop film reads as authored rather than stock.
+	•	Keep one continuous score/music bed running under Acts I–IV; let Act V's silence-adjacent stillness (black screen, no music swell) be the contrast that makes the reversal land.
+	•	The founders' circle in Scene 19 is the one moment built specifically for this film rather than borrowed from the Whop structure — treat it as the visual signature, since it's the beat with no direct precedent in the reference film.

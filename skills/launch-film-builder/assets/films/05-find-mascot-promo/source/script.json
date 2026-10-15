@@ -1,0 +1,67 @@
+{
+ "voice": "cgSgspJ2msm6clMCkdW9",
+ "model": "eleven_v3",
+ "music": {
+  "file": "<your-drive>/Work/EKOS/Launch videos/find-promo/music/zzsPCS5Lomg.wav",
+  "kick": 6.39,
+  "kick_at": 1.5,
+  "credit": "Music: The Happy Hand Clap Song by nic nak tracks"
+ },
+ "lines": [
+  {
+   "id": "v1",
+   "at": 0.55,
+   "tts": "[whispers] Psst.",
+   "text": "Psst."
+  },
+  {
+   "id": "v2",
+   "at": 1.55,
+   "tts": "[curious] Got something to sell?",
+   "text": "Got something to sell?"
+  },
+  {
+   "id": "v3",
+   "at": 4.45,
+   "tts": "[playful] An app? A B2B startup? A service business?",
+   "text": "An app? A B2B startup? A service business?"
+  },
+  {
+   "id": "v4",
+   "at": 8.5,
+   "tts": "Ekos deploys AI agents that do the work, and get you customers.",
+   "text": "Ekos deploys AI agents that do the work, and get you customers."
+  },
+  {
+   "id": "v5",
+   "at": 13.2,
+   "tts": "Finding buyers? Writing outreach? Posting every day? Following up?",
+   "text": "Finding buyers? Writing outreach? Posting every day? Following up?"
+  },
+  {
+   "id": "v6",
+   "after": "v5",
+   "gap": 0.3,
+   "tts": "[confident] Handled.",
+   "text": "Handled."
+  },
+  {
+   "id": "v7",
+   "at": 20.05,
+   "tts": "[teasing] Don't believe us?",
+   "text": "Don't believe us?"
+  },
+  {
+   "id": "v8",
+   "at": 22.3,
+   "tts": "Put your website here, and see exactly who your customers are.",
+   "text": "Put your website here, and see exactly who your customers are."
+  },
+  {
+   "id": "v9",
+   "at": 27.4,
+   "tts": "[excited] Get started today, at ekoslabs dot com slash find.",
+   "text": "Get started today at ekoslabs.com/find."
+  }
+ ]
+}

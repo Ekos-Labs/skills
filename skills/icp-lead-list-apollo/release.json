@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "icp-lead-list-apollo",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "byo-provider",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "Apollo account connected through the official Apollo MCP connector"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

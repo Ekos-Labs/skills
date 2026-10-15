@@ -1,0 +1,93 @@
+EKOS
+Launch Video Strategy
+4-Video GTM Launch Sequence — Positioning, Structure & Rollout Order
+
+1. Overview
+EKOS's launch runs on four videos, each doing a distinct job in the funnel rather than repeating the same pitch four times. Together they move a cold viewer from "what is this category" to "I trust this founder enough to book a call." The table below is the map — the sections after it break down each video individually.
+Video
+Core Function
+Funnel Role
+1. Animated Launch
+Product-in-action demo, dramatized
+Hook / Awareness
+2. SF Launch
+Category & market-shift narrative
+Context / Positioning
+3. Explanatory Launch
+Product walkthrough, feature clarity
+Education / Consideration
+4. Storytelling Launch
+Founder vision, emotional origin
+Trust / Conversion
+2. The Four Videos
+1 · Animated Launch
+CONCEPT
+An AI-generated (or hybrid) animated sequence dramatizing product efficiency: someone racing to their laptop, late for a date, opens EKOS's GTM engine, leaves — and returns to find leads already generated and waiting. The product works while life happens.
+STRATEGIC PURPOSE
+This is the hook piece. It doesn't require any prior context about EKOS or GTM to land — the emotional beat (racing the clock, relief on return) is universal, which is what makes it the most shareable of the four and the one built to travel to cold audiences.
+SUGGESTED STRUCTURE
+	•	Open on the time-pressure moment (0–3s) — the hook has to work with sound off.
+	•	Show the single action of handing off to EKOS — one click, not a feature tour.
+	•	Cut to the return: results, leads, pipeline movement already happened without him.
+	•	Close on a plain-language line of what just happened, then the EKOS mark.
+REFERENCE
+https://x.com/GTE_XYZ/status/2090112858767917184
+2 · SF Launch
+CONCEPT
+A creative, narrative-driven piece on how GTM was defined years ago and how the entire game of going to market has since changed — how brands now want to show up, and where EKOS fits inside that shift.
+STRATEGIC PURPOSE
+This is the positioning piece, not a product demo. Its job is to win the category argument first: GTM as brands have known it is outdated, and a new approach is already underway. Landing this argument before anyone has seen the product means EKOS is introduced as the answer to a shift the audience already agrees with, instead of a cold pitch.
+SUGGESTED STRUCTURE
+	•	Frame the old model of GTM — what "going to market" used to mean and why it's breaking.
+	•	Name the shift: how brands are choosing to show up now, and what's driving that change.
+	•	Introduce EKOS as built for the shift, not retrofitted onto the old model.
+	•	End on a forward-looking line — where this is headed, not just what EKOS does today.
+REFERENCE
+https://x.com/beechinour/status/2026702701199868072
+3 · Explanatory Launch
+CONCEPT
+A second animated piece, this time fully self-contained — no outside narrative, no metaphor. A straightforward walkthrough of the app itself: what it does and how it actually works.
+STRATEGIC PURPOSE
+By this point the audience has seen the emotional hook (Animated Launch) and the category argument (SF Launch). This video answers the practical question both of those raise but don't resolve: "okay, but how does it actually work?" It's the clarity piece — the one that removes doubt for someone close to converting.
+SUGGESTED STRUCTURE
+	•	State plainly what EKOS is in one line before showing anything.
+	•	Walk the core flow in order: input → what the engine does → output, using the actual product.
+	•	Keep it feature-literal — this is the one video where restraint from metaphor is the point.
+	•	Close with what someone would do next to try it themselves.
+REFERENCE
+https://x.com/tahaishret/status/2083894969178440152
+4 · Storytelling Launch
+CONCEPT
+A founder-led piece putting the company's story into words — why this was started, what the vision is, and what's actually being pursued here. The goal is to emotionally connect the company's vision with the founder's own.
+STRATEGIC PURPOSE
+This is the trust anchor and the natural close of the sequence. The audience has already been given the hook, the category argument, and the mechanics — this is where the founder becomes a person instead of a logo, which is what tends to convert a viewer into someone willing to book a free audit or strategy session.
+SUGGESTED STRUCTURE
+	•	Start from a real, specific moment — not "I've always been passionate about GTM," but the actual thing that triggered building this.
+	•	Name the problem in personal terms before naming it in market terms.
+	•	Connect the company's vision to the founder's own stakes in it — why this, why now, why him.
+	•	Close with the invitation — this is the video that should carry the free audit / strategy-session CTA.
+REFERENCE
+https://x.com/heyclicky/status/2078900955589050711
+3. Recommended Sequencing
+Order matters more than any single video's quality — each piece is written to assume the audience has already seen the one before it. Recommended rollout:
+Order
+Video
+Rationale
+1
+SF Launch
+Opens the category conversation before EKOS is even named — establishes that GTM itself has changed and creates the tension the product resolves. Sets up demand before supply.
+2
+Animated Launch
+Drops EKOS into that tension as the resolution. Highest shareability piece — built to travel outside your existing audience, so it should hit while the category conversation is still fresh.
+3
+Explanatory Launch
+Converts curiosity into understanding. By now people know EKOS exists and roughly what it promises — this is where they learn how it actually works, which is what turns a like into a signup or DM.
+4
+Storytelling Launch
+Closes the sequence on trust. Once the audience knows what EKOS is, why it matters, and how it works, the founder story converts interest into belief — this is the piece that should carry your free-audit / strategy-session CTA.
+This is a starting sequence, not a fixed rule — if the Animated Launch clearly out-performs on reach in testing, it can lead instead of SF Launch, with SF Launch following to give the moment context once attention is already captured.
+4. Distribution Notes
+	•	Twitter/X carries the native launch posts for all four, given the reference format is X-native — thread or single-tweet video with a plain-language caption, no hard sell.
+	•	Each video gets repurposed to Instagram as a native Reel with the same cut, re-captioned for that audience — same content, not separate production.
+	•	The Storytelling Launch's CTA (free audit / free strategy session) should also be pinned or linked from the Animated and Explanatory posts once it's live, so earlier traffic still finds the offer.
+	•	Space releases enough to let each video's comments/DMs settle before the next drops — this is a sequence the audience is meant to follow, not four unrelated launch posts in one week.

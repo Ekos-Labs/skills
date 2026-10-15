@@ -1,0 +1,951 @@
+{
+ "title": "It's time to be heard.",
+ "fps": 30,
+ "width": 1440,
+ "height": 1080,
+ "dirs": {
+  "v2": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch-v2/sources",
+  "bite": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch-v2/bites",
+  "v1": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch/sources",
+  "veo": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch-v2/veo"
+ },
+ "music": {
+  "file": "<your-drive>/Work/EKOS/Launch videos/jarvis-launch/music/LyGAOTWJbwU.wav",
+  "credit": "Music: Emotional Cinematic Piano Orchestra by MokkaMusic",
+  "drop": 89.5,
+  "downbeat": 108.75
+ },
+ "voices": {
+  "narrator": {
+   "eleven": "nPczCjzI2devNBz1zQrb",
+   "say": "Ralph",
+   "rate": 150
+  },
+  "ekos": {
+   "eleven": "onwK4e9ZLuTAKqWW03F9",
+   "say": "Daniel",
+   "rate": 165
+  }
+ },
+ "lines": {
+  "n1": [
+   "narrator",
+   "Everything we ever built had to be carried to the world."
+  ],
+  "n2a": [
+   "narrator",
+   "By voice."
+  ],
+  "n2b": [
+   "narrator",
+   "By paper."
+  ],
+  "n2c": [
+   "narrator",
+   "By wire."
+  ],
+  "n3": [
+   "narrator",
+   "Then everyone got a voice."
+  ],
+  "n4": [
+   "narrator",
+   "Now, anyone can build anything."
+  ],
+  "n5": [
+   "narrator",
+   "So the world has never been louder."
+  ],
+  "n6": [
+   "narrator",
+   "Building was never the hard part."
+  ],
+  "n7": [
+   "narrator",
+   "Being heard is."
+  ],
+  "j1": [
+   "ekos",
+   "Good morning. While you slept, I found fourteen companies hiring their first marketer."
+  ],
+  "n10": [
+   "narrator",
+   "The tools changed. The job never did."
+  ],
+  "n9": [
+   "narrator",
+   "It's time to be heard."
+  ],
+  "n11": [
+   "narrator",
+   "For a hundred years, we did it by hand."
+  ],
+  "n11b": [
+   "narrator",
+   "Door by door."
+  ],
+  "n11c": [
+   "narrator",
+   "Letter by letter."
+  ],
+  "n11d": [
+   "narrator",
+   "Post by post."
+  ],
+  "n12": [
+   "narrator",
+   "Now, the machines will carry it."
+  ]
+ },
+ "bites": {
+  "news": {
+   "src": "LlSYwHePOmc",
+   "in": 0.0,
+   "out": 3.3,
+   "text": "Extra, extra, read all about it!"
+  },
+  "nbc": {
+   "src": "jWmI50D41tE",
+   "in": 0.0,
+   "out": 2.6,
+   "text": ""
+  },
+  "og1": {
+   "src": "Br2KSsaTzUc",
+   "in": 238.75,
+   "out": 244.1,
+   "text": "When I started Ogilvy and Mather, New York, nobody had heard of us."
+  },
+  "og2": {
+   "src": "Br2KSsaTzUc",
+   "in": 254.6,
+   "out": 261.05,
+   "text": "Every four weeks, I sent personalized mailings to our new business prospects."
+  },
+  "og3": {
+   "src": "Br2KSsaTzUc",
+   "in": 269.25,
+   "out": 270.62,
+   "text": "That was how we grew."
+  },
+  "aol": {
+   "src": "dudJjUU9Nhs",
+   "in": 25.6,
+   "out": 28.6,
+   "text": "You've got mail."
+  },
+  "gv1": {
+   "src": "9c6JzlSQ_QA",
+   "in": 7.32,
+   "out": 9.5,
+   "text": "Attention is how nations were built."
+  },
+  "gv2": {
+   "src": "9c6JzlSQ_QA",
+   "in": 13.84,
+   "out": 17.14,
+   "text": "Attention is the singular asset of the human race."
+  },
+  "jh1": {
+   "src": "1EXtvwTNAeE",
+   "in": 12.88,
+   "out": 17.76,
+   "text": "Everybody in the world is now a programmer. This is the miracle of artificial intelligence."
+  },
+  "al1": {
+   "src": "5MWT_doo68k",
+   "in": 1167.62,
+   "out": 1173.4,
+   "text": "Hey, go do this task for my job, and it goes off and clicks around the internet and calls someone and looks at your files and does it."
+  },
+  "af1": {
+   "src": "irdNqlytsLc",
+   "in": 25.7,
+   "out": 33.0,
+   "text": "An AI sales development agent that proactively works leads by contacting customers, responding to their questions, and scheduling meetings."
+  }
+ },
+ "caption_breaks": {
+  "Everything we ever built had to be carried to the world.": "Everything we ever built | had to be carried to the world.",
+  "When I started Ogilvy and Mather, New York, nobody had heard of us.": "When I started Ogilvy and Mather, New York, | nobody had heard of us.",
+  "Every four weeks, I sent personalized mailings to our new business prospects.": "Every four weeks, | I sent personalized mailings to our new business prospects.",
+  "Hey, go do this task for my job, and it goes off and clicks around the internet and calls someone and looks at your files and does it.": "Hey, go do this task for my job, | and it goes off and clicks around the internet | and calls someone and looks at your files and does it.",
+  "An AI sales development agent that proactively works leads by contacting customers, responding to their questions, and scheduling meetings.": "An AI sales development agent | that proactively works leads by contacting customers, | responding to their questions, and scheduling meetings."
+ },
+ "crops": {
+  "pathe": "crop=iw*0.84:ih*0.84:0:ih*0.16",
+  "ap": "crop=ih*4/3:ih:iw*0.02:0",
+  "DLSbHCEztEI": "crop=762:571:160:0",
+  "SF9ntGRkvko": "crop=768:576:166:0",
+  "jo6qDnMt9O4": "crop=493:370:111:0",
+  "GcpoUfaY0jM": "crop=758:569:166:0",
+  "aLKJFSi14gk": "crop=iw*0.78:ih*0.78:0:ih*0.08",
+  "Ul-61fIlc_s": "crop=1440:1080:240:0",
+  "P3KWiIST4es": "crop=768:576:160:0",
+  "eGO5UwTnlNk": "crop=363:272:128:0",
+  "b13VkO_7yhw": "crop=480:360:80:0",
+  "jensen": "crop=1100:825:520:75",
+  "bEg4NVcHc4k": "crop=1180:664:30:10",
+  "altman": "crop=ih*4/3:ih:0:0",
+  "SrRNC7PPLGA": "crop=ih*4/3:ih:(iw-ih*4/3)/2:0",
+  "CEjE6LOwZRc": "crop=iw*0.63:ih*0.84:iw*0.185:0",
+  "K27diMbCsuw": "crop=ih*0.86*4/3:ih*0.86:(iw-ih*0.86*4/3)/2:0",
+  "dB6pOolO7io": "crop=ih*4/3:ih:iw*0.05:0"
+ },
+ "shotdefs": "shot = [source, in, weight_or_dur?, crop?]. source = dir:id. dur given as {\"d\": seconds}. anchor = index of the section event the shot starts on.",
+ "sections": [
+  {
+   "name": "open",
+   "min": 4.9,
+   "events": [
+    {
+     "sfx": "bell",
+     "at": 0.1
+    },
+    {
+     "line": "n1",
+     "gap": 1.0
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 19.5,
+     "crop": "pathe",
+     "push": 0.08
+    }
+   ]
+  },
+  {
+   "name": "criers and presses",
+   "min": 5.2,
+   "events": [
+    {
+     "bite": "news",
+     "gap": 0.15
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:TILWKnKHEU4",
+     "in": 1.9,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:tEd5-zXnmIw",
+     "in": 11.5,
+     "crop": "ap"
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 62.5,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:TILWKnKHEU4",
+     "in": 13.0,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 13.0,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:DLSbHCEztEI",
+     "in": 8.8
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 18.2,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:DLSbHCEztEI",
+     "in": 12.0
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 54.3,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 34.0,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:TILWKnKHEU4",
+     "in": 20.5,
+     "crop": "pathe"
+    }
+   ]
+  },
+  {
+   "name": "voice paper wire",
+   "tail": 0.35,
+   "events": [
+    {
+     "line": "n2a",
+     "gap": 0.2
+    },
+    {
+     "line": "n2b",
+     "gap": 0.3
+    },
+    {
+     "line": "n2c",
+     "gap": 0.3
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:tEd5-zXnmIw",
+     "in": 16.6,
+     "crop": "ap",
+     "anchor": 0
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 23.5,
+     "crop": "pathe",
+     "anchor": 1
+    },
+    {
+     "s": "v2:GcpoUfaY0jM",
+     "in": 6.4,
+     "anchor": 2
+    }
+   ]
+  },
+  {
+   "name": "broadcast",
+   "min": 3.8,
+   "events": [
+    {
+     "bite": "nbc",
+     "gap": 0.1
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:SF9ntGRkvko",
+     "in": 21.4
+    },
+    {
+     "s": "v2:jo6qDnMt9O4",
+     "in": 3.1
+    },
+    {
+     "s": "v2:jo6qDnMt9O4",
+     "in": 29.3
+    },
+    {
+     "s": "v2:GcpoUfaY0jM",
+     "in": 1.1
+    },
+    {
+     "s": "v2:P3KWiIST4es",
+     "in": 50.8
+    },
+    {
+     "s": "v2:eGO5UwTnlNk",
+     "in": 11.8
+    },
+    {
+     "s": "v2:P3KWiIST4es",
+     "in": 152.4
+    },
+    {
+     "s": "v2:eGO5UwTnlNk",
+     "in": 1.4
+    }
+   ]
+  },
+  {
+   "name": "ogilvy",
+   "tail": 0.45,
+   "events": [
+    {
+     "bite": "og1",
+     "gap": 0.25
+    },
+    {
+     "bite": "og2",
+     "gap": 0.45
+    },
+    {
+     "bite": "og3",
+     "gap": 0.35
+    }
+   ],
+   "shots": [
+    {
+     "s": "bite:Br2KSsaTzUc",
+     "in": 238.7,
+     "anchor": 0,
+     "w": 2.2
+    },
+    {
+     "s": "v2:b13VkO_7yhw",
+     "in": 2.3
+    },
+    {
+     "s": "v2:b13VkO_7yhw",
+     "in": 22.0
+    },
+    {
+     "s": "v2:USE2BEBMGiI",
+     "in": 3.0,
+     "anchor": 1
+    },
+    {
+     "s": "v2:b13VkO_7yhw",
+     "in": 31.6
+    },
+    {
+     "s": "v2:aLKJFSi14gk",
+     "in": 13.2
+    },
+    {
+     "s": "v2:Ul-61fIlc_s",
+     "in": 22.6
+    },
+    {
+     "s": "v2:aLKJFSi14gk",
+     "in": 24.7
+    },
+    {
+     "s": "v2:Ul-61fIlc_s",
+     "in": 31.7
+    },
+    {
+     "s": "bite:Br2KSsaTzUc",
+     "in": 269.1,
+     "anchor": 2
+    }
+   ]
+  },
+  {
+   "name": "internet",
+   "tail": 0.3,
+   "events": [
+    {
+     "bite": "aol",
+     "gap": 0.1
+    },
+    {
+     "line": "n3",
+     "gap": 0.3
+    }
+   ],
+   "shots": [
+    {
+     "s": "bite:dudJjUU9Nhs",
+     "in": 0.2,
+     "anchor": 0,
+     "w": 1.6
+    },
+    {
+     "s": "bite:dudJjUU9Nhs",
+     "in": 28.2,
+     "w": 1.0
+    },
+    {
+     "s": "v2:uxpPDyXzmw4",
+     "in": 2.0,
+     "anchor": 1
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 3.0
+    },
+    {
+     "s": "v2:1d-vk39ADvk",
+     "in": 8.0
+    }
+   ]
+  },
+  {
+   "name": "attention",
+   "tail": 0.3,
+   "events": [
+    {
+     "bite": "gv1",
+     "gap": 0.2
+    },
+    {
+     "bite": "gv2",
+     "gap": 0.3
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:qCId-swJ19w",
+     "in": 4.0
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 62.5,
+     "crop": "pathe"
+    },
+    {
+     "s": "v2:5Ozo9fy4ajM",
+     "in": 4.6
+    },
+    {
+     "s": "v2:MtSfqShtQr8",
+     "in": 2.8,
+     "anchor": 1
+    },
+    {
+     "s": "v2:S-b0OpWO4So",
+     "in": 14.6
+    },
+    {
+     "s": "v2:qCId-swJ19w",
+     "in": 15.0
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 6.5
+    },
+    {
+     "s": "v2:S-b0OpWO4So",
+     "in": 32.2
+    }
+   ]
+  },
+  {
+   "name": "anyone can build",
+   "tail": 0.25,
+   "events": [
+    {
+     "line": "n4",
+     "gap": 0.3
+    },
+    {
+     "bite": "jh1",
+     "gap": 0.35
+    }
+   ],
+   "shots": [
+    {
+     "s": "v1:T_tccP14CyE",
+     "in": 8.0
+    },
+    {
+     "ui": "prompt",
+     "w": 1.6
+    },
+    {
+     "s": "v1:f1T7xBSrnEs",
+     "in": 3.0
+    },
+    {
+     "s": "v1:fziKmtC47RE",
+     "in": 2.4
+    },
+    {
+     "s": "bite:1EXtvwTNAeE",
+     "in": 12.9,
+     "crop": "jensen",
+     "anchor": 1,
+     "w": 2.2
+    },
+    {
+     "s": "v1:VSmeG54-7NU",
+     "in": 4.0
+    },
+    {
+     "s": "v1:bEg4NVcHc4k",
+     "in": 1.0,
+     "crop": "bEg4NVcHc4k"
+    },
+    {
+     "s": "v1:dKZv05JZhss",
+     "in": 6.0
+    }
+   ]
+  },
+  {
+   "name": "louder",
+   "tail": 0.5,
+   "events": [
+    {
+     "line": "n5",
+     "gap": 0.15
+    }
+   ],
+   "shots": [
+    {
+     "s": "v2:qCId-swJ19w",
+     "in": 9.6,
+     "w": 1.6
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 7.7,
+     "w": 1.5
+    },
+    {
+     "s": "v2:P3KWiIST4es",
+     "in": 71.0,
+     "w": 1.4
+    },
+    {
+     "s": "v2:uxpPDyXzmw4",
+     "in": 15.0,
+     "w": 1.3
+    },
+    {
+     "s": "v2:5Ozo9fy4ajM",
+     "in": 10.0,
+     "w": 1.2
+    },
+    {
+     "s": "v2:DLSbHCEztEI",
+     "in": 12.4,
+     "w": 1.1
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 28.8,
+     "crop": "pathe",
+     "w": 1.0
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 54.3,
+     "crop": "pathe",
+     "w": 0.9
+    },
+    {
+     "s": "v2:S-b0OpWO4So",
+     "in": 20.5,
+     "w": 0.8
+    },
+    {
+     "s": "v2:qCId-swJ19w",
+     "in": 18.0,
+     "w": 0.75
+    },
+    {
+     "s": "v2:1d-vk39ADvk",
+     "in": 14.0,
+     "w": 0.7
+    },
+    {
+     "s": "v2:eGO5UwTnlNk",
+     "in": 8.0,
+     "w": 0.65
+    },
+    {
+     "s": "v2:MtSfqShtQr8",
+     "in": 6.8,
+     "w": 0.6
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 1.7,
+     "w": 0.6
+    }
+   ]
+  },
+  {
+   "name": "turn",
+   "fixed": 19.25,
+   "music_mark": "drop",
+   "events": [
+    {
+     "line": "n6",
+     "at": 0.4
+    },
+    {
+     "line": "n7",
+     "at": 2.6
+    },
+    {
+     "line": "n11",
+     "at": 4.3
+    },
+    {
+     "line": "n11b",
+     "at": 7.0
+    },
+    {
+     "line": "n11c",
+     "at": 8.3
+    },
+    {
+     "line": "n11d",
+     "at": 9.6
+    },
+    {
+     "line": "n12",
+     "at": 11.2
+    },
+    {
+     "line": "j1",
+     "at": 13.3
+    }
+   ],
+   "shots": [
+    {
+     "black": true,
+     "d": 4.2
+    },
+    {
+     "s": "v2:SrRNC7PPLGA",
+     "in": 38.0,
+     "d": 1.3
+    },
+    {
+     "s": "v2:CEjE6LOwZRc",
+     "in": 281.0,
+     "d": 1.4
+    },
+    {
+     "s": "v2:Ul-61fIlc_s",
+     "in": 7.9,
+     "d": 1.3
+    },
+    {
+     "s": "v2:SrRNC7PPLGA",
+     "in": 496.0,
+     "d": 1.3
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 3.0,
+     "d": 1.6
+    },
+    {
+     "s": "bite:ODaHJzOyVCQ",
+     "in": 84.0,
+     "d": 1.2
+    },
+    {
+     "s": "bite:dB6pOolO7io",
+     "in": 35.0,
+     "d": 1.2
+    },
+    {
+     "s": "v1:Byo-lcR6Bmw",
+     "in": 36.2,
+     "d": 2.3
+    },
+    {
+     "s": "bite:CIJx494VsOU",
+     "in": 97.0,
+     "d": 1.6
+    },
+    {
+     "s": "bite:irdNqlytsLc",
+     "in": 5.0,
+     "d": 1.85
+    }
+   ]
+  },
+  {
+   "name": "finale",
+   "fixed": 29.0,
+   "music_mark": "downbeat",
+   "events": [
+    {
+     "bite": "al1",
+     "at": 0.5
+    },
+    {
+     "bite": "af1",
+     "at": 6.6
+    },
+    {
+     "line": "n10",
+     "at": 14.4
+    },
+    {
+     "line": "n9",
+     "at": 19.4
+    }
+   ],
+   "logos": {
+    "at": 16.5,
+    "each": 0.2,
+    "items": [
+     "linkedin",
+     "x",
+     "reddit",
+     "email",
+     "youtube",
+     "instagram",
+     "google",
+     "chatgpt",
+     "producthunt",
+     "slack",
+     "hubspot",
+     "notion"
+    ]
+   },
+   "shots": [
+    {
+     "s": "bite:irdNqlytsLc",
+     "in": 28.0,
+     "d": 0.25
+    },
+    {
+     "s": "v2:SrRNC7PPLGA",
+     "in": 344.0,
+     "d": 0.25
+    },
+    {
+     "s": "bite:5MWT_doo68k",
+     "in": 1167.3,
+     "crop": "altman",
+     "d": 2.0
+    },
+    {
+     "s": "bite:ODaHJzOyVCQ",
+     "in": 38.0,
+     "d": 1.3
+    },
+    {
+     "s": "bite:dB6pOolO7io",
+     "in": 54.5,
+     "d": 1.3
+    },
+    {
+     "s": "bite:5MWT_doo68k",
+     "in": 1170.9,
+     "crop": "altman",
+     "d": 1.3
+    },
+    {
+     "s": "bite:irdNqlytsLc",
+     "in": 27.6,
+     "d": 1.6
+    },
+    {
+     "s": "bite:K27diMbCsuw",
+     "in": 112.0,
+     "d": 1.3
+    },
+    {
+     "s": "v2:CEjE6LOwZRc",
+     "in": 394.0,
+     "d": 1.2
+    },
+    {
+     "s": "bite:CIJx494VsOU",
+     "in": 135.8,
+     "d": 1.3
+    },
+    {
+     "s": "bite:irdNqlytsLc",
+     "in": 72.5,
+     "d": 1.2
+    },
+    {
+     "s": "v2:PYnjuj66ZIs",
+     "in": 10.0,
+     "d": 1.1
+    },
+    {
+     "s": "v2:TILWKnKHEU4",
+     "in": 12.8,
+     "crop": "pathe",
+     "d": 0.6
+    },
+    {
+     "s": "bite:ODaHJzOyVCQ",
+     "in": 69.0,
+     "d": 0.6
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 18.0,
+     "crop": "pathe",
+     "d": 0.6
+    },
+    {
+     "s": "bite:dB6pOolO7io",
+     "in": 25.0,
+     "d": 0.6
+    },
+    {
+     "s": "v2:qCId-swJ19w",
+     "in": 12.3,
+     "d": 0.2
+    },
+    {
+     "s": "v2:S-b0OpWO4So",
+     "in": 26.0,
+     "d": 0.2
+    },
+    {
+     "s": "v2:5Ozo9fy4ajM",
+     "in": 8.3,
+     "d": 0.2
+    },
+    {
+     "s": "v2:MtSfqShtQr8",
+     "in": 8.6,
+     "d": 0.2
+    },
+    {
+     "s": "v2:uxpPDyXzmw4",
+     "in": 23.4,
+     "d": 0.2
+    },
+    {
+     "s": "v2:XlpGKauLvB0",
+     "in": 8.9,
+     "d": 0.2
+    },
+    {
+     "s": "v2:P3KWiIST4es",
+     "in": 111.8,
+     "d": 0.2
+    },
+    {
+     "s": "v2:SrRNC7PPLGA",
+     "in": 573.0,
+     "d": 0.2
+    },
+    {
+     "s": "bite:irdNqlytsLc",
+     "in": 5.4,
+     "d": 0.2
+    },
+    {
+     "s": "bite:ODaHJzOyVCQ",
+     "in": 53.6,
+     "d": 0.2
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 62.8,
+     "crop": "pathe",
+     "d": 0.2
+    },
+    {
+     "s": "v2:wZV11BplbXw",
+     "in": 39.3,
+     "crop": "pathe",
+     "d": 0.2
+    },
+    {
+     "s": "v2:6AgKnLJ4_9g",
+     "in": 24.5,
+     "crop": "pathe",
+     "d": 2.8,
+     "push": 0.05
+    },
+    {
+     "logo": true,
+     "d": 7.3
+    }
+   ]
+  }
+ ]
+}

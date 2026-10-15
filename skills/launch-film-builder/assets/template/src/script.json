@@ -1,0 +1,17 @@
+{
+ "fps": 30,
+ "voice": {"elevenlabs_id": "cgSgspJ2msm6clMCkdW9", "model": "eleven_v3", "say": "Samantha"},
+ "music": null,
+ "tail": 2.6,
+ "lines": [
+  {"id": "v1", "at": 0.55, "tts": "[whispers] Psst."},
+  {"id": "v2", "after": "v1", "gap": 0.45, "tts": "Inbox on fire?"},
+  {"id": "v3", "after": "v2", "gap": 1.4, "tts": "Refunds? Where's my order? Is this in stock?"},
+  {"id": "v4", "after": "v3", "gap": 1.0, "tts": "Acme reads every message, and answers in your voice."},
+  {"id": "v5", "after": "v4", "gap": 1.0, "tts": "Sorting tickets? Writing replies? Chasing refunds? Following up?"},
+  {"id": "v6", "after": "v5", "gap": 0.3, "tts": "[confident] Handled."},
+  {"id": "v7", "after": "v6", "gap": 0.8, "tts": "[teasing] Don't believe us?"},
+  {"id": "v8", "after": "v7", "gap": 0.6, "tts": "Paste your store link, and watch it answer a real question."},
+  {"id": "v9", "after": "v8", "gap": 1.8, "tts": "[excited] Try it free, at acme dot app."}
+ ]
+}

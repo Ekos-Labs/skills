@@ -1,0 +1,1 @@
+{"compilerOptions":{"target":"ES2020","module":"ESNext","jsx":"react-jsx","moduleResolution":"Bundler","strict":true,"esModuleInterop":true,"resolveJsonModule":true,"skipLibCheck":true,"noEmit":true},"include":["src"]}

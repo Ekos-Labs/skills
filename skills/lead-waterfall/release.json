@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "slug": "lead-waterfall",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "byo-provider",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code or Codex",
+    "At least one of: Apollo MCP connector or Apify API token",
+    "Optional: Hunter or ZeroBounce API key for email checks"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}

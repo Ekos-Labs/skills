@@ -1,0 +1,26 @@
+{
+  "name": "pocket-cmo-launch-video",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "remotion studio src/index.ts",
+    "build": "remotion render src/index.ts LaunchVideo out/launch-video.mp4",
+    "still": "remotion still src/index.ts LaunchVideo out/launch-video.png",
+    "voiceover": "node --env-file=.env scripts/generate-voiceover.mjs",
+    "upgrade": "remotion upgrade"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.512",
+    "@remotion/google-fonts": "4.0.512",
+    "@remotion/transitions": "4.0.512",
+    "lucide-react": "^0.469.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "remotion": "4.0.512"
+  },
+  "devDependencies": {
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "typescript": "^5"
+  }
+}
