@@ -13,7 +13,7 @@ Every skill is free to inspect, use, modify, and improve.
 Clone the repository:
 
 ```bash
-git clone https://github.com/Eshaank08/skills.git
+git clone https://github.com/Ekos-Labs/skills.git
 cd skills
 ```
 

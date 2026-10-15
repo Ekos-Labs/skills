@@ -13,7 +13,7 @@ Ekos Skills 是一套面向 Claude Code、Codex 以及其他支持 `SKILL.md` �
 克隆仓库：
 
 ```bash
-git clone https://github.com/Eshaank08/skills.git
+git clone https://github.com/Ekos-Labs/skills.git
 cd skills
 ```
 
