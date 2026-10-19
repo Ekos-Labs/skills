@@ -1,4 +1,27 @@
-# Mascot promo: scene recipes
+# 05 · Find promo (talking 3D mascot, Pocketsflow style)
+
+Frames: [frames.jpg](../../assets/films/05-find-mascot-promo/frames.jpg) · Original Ekos source: [source/](../../assets/films/05-find-mascot-promo/source/) · **Runnable starter: [assets/template/](../../assets/template/)** (the same film, made generic for "Acme")
+
+## What it is
+
+A 30 to 35 second product promo after a Pocketsflow spot. A coded 3D character talks (lip-synced to the voiceover), gestures with his hands and is drawn in dither dots that crawl as he moves. Headlines land word by word with one serif accent word. Cards, a phone console, a grid of live cards and a stamp move like the product. It renders as a 16:9 film and a 9:16 reel from one component.
+
+Use it for: a product, a feature or a free tool (a lead magnet). It covers what it is, who it is for, what it does, a doubt, "try it", and the URL.
+
+The Ekos film ran 33.6 s at 60 fps, for ekoslabs.com/find:
+- Voice: ElevenLabs Jessica on eleven_v3 with tags.
+- Music: a light clap track.
+- Character: modelled on a clay render made in Gemini.
+- Files: `ekos-find-promo-v3.mp4` (wide) and `-v3-reel.mp4` (vertical).
+
+History:
+- v1 used halftoned still images of the character.
+- v2 replaced them with the coded character, after Eshaan noticed the reference's dots move inside its character.
+- v3 added hands, a slimmer build and the vertical reel.
+
+Start from the template, not from the original source. The template is the same system, made generic, tested from a clean install, and its timings follow the voice automatically. The character is documented in [character.md](../character.md), and the voice, timing and music pipeline in [voice-and-sound.md](../voice-and-sound.md).
+
+## Scene recipes
 
 Each scene in `src/Promo.tsx` is a component that takes `t` (seconds) and reads `useLay()` for the layout. Scene boundaries live in `T`, derived from line starts. Below, each scene's moves, the numbers that matter, and how its vertical layout differs. Replace the content freely; the moves are what make it feel produced.
 
@@ -81,7 +104,7 @@ With an image logo, set the clip's bottom to the top edge of the letters in the 
 - click: a button;
 - key: one per typed character.
 
-Volumes are 0.3 to 0.9, the stamp loudest. Music, if any, ducks to 65% under speech and fades over the last 2.2 seconds. [voice-and-sound.md](voice-and-sound.md) covers the mix.
+Volumes are 0.3 to 0.9, the stamp loudest. Music, if any, ducks to 65% under speech and fades over the last 2.2 seconds. [voice-and-sound.md](../voice-and-sound.md) covers the mix.
 
 ## Vertical layout rules
 

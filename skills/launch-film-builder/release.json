@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "slug": "launch-film-builder",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "accessTier": "free",
   "executionMode": "local-runtime",
   "source": {
     "kind": "ekos-original",
-    "description": "Written by Ekos Labs from the method behind its own launch films. Bundles a Remotion template with a coded 3D character, audio and mastering scripts. Fonts are installed from npm (Inter and Instrument Serif, SIL Open Font License). No upstream skill files are bundled."
+    "description": "Written by Ekos Labs from its own launch films: nine recipes with the original source code, frame sheets (shot lists for the two films cut from public figures and news footage) and review notes, a runnable Remotion template with a coded 3D character, and audio, mastering and contact-sheet scripts. Credits the video-use method (browser-use, MIT) and Bang Motion (HTML films) as methods used; no upstream files are bundled. Fonts install from npm (SIL Open Font License)."
   },
   "dependencies": [
     "Claude Code or Codex",
@@ -14,8 +14,9 @@
     "ffmpeg",
     "Python 3 with numpy",
     "Remotion 4 and three.js (installed by the bundled template)",
-    "Optional: ElevenLabs API key for the voice",
-    "Optional: mlx-whisper or faster-whisper for exact word timing"
+    "Optional: ElevenLabs API key for voices",
+    "Optional: mlx-whisper or faster-whisper for exact word timing",
+    "Optional: yt-dlp (latest, via uvx) for references and footage"
   ],
   "qa": {
     "runs": [],

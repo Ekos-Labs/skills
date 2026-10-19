@@ -1,6 +1,6 @@
 # 01 · SF launch teaser (documentary collage, no narrator)
 
-Frames: [frames.jpg](../../assets/films/01-sf-launch-teaser/frames.jpg) · Plan, teardown and sound kit: [notes/](../../assets/films/01-sf-launch-teaser/notes/)
+Shots: the second-by-second table below (no frame sheet: the film is built from real people, news footage and logos that are not ours to share) · How the artefacts were found: [footage.md](../footage.md#finding-footage-with-your-agent) · Plan, teardown and sound kit: [notes/](../../assets/films/01-sf-launch-teaser/notes/)
 
 ## What it is
 

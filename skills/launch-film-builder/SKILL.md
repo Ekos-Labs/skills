@@ -1,125 +1,145 @@
 ---
 name: launch-film-builder
-description: Make a launch film or promo video the way Ekos Labs makes its own. A talking, coded 3D character with dither dots that crawl as it moves, word-by-word kinetic type synced to an AI voiceover, product UI that builds itself on screen, and a wide film plus a vertical reel rendered locally with Remotion. Also covers the a16z-style manifesto film cut from archival footage. Use whenever someone wants a launch video, product promo, explainer, teaser, reel or announcement film for a product, feature, lead magnet or company, including when they share a reference video and say "make one like this".
+description: Make launch videos the way Ekos Labs made its own. Nine proven recipes, each with the real source code, frame sheets and the lessons from review. A documentary collage teaser with no narrator; a founder-on-camera explainer with product UI built around them; an a16z-style "It's time to build" manifesto cut from archival footage and famous sound bites the video-use way; an assistant reveal film; a talking 3D mascot promo with a vertical reel; a silent HTML and GSAP site film; a 9:16 product reel with synthesised sound; looping feature previews; and a kinetic statement launch. Rendered locally with Remotion, ffmpeg and an AI voice. Use whenever someone wants a launch video, teaser, manifesto, promo, explainer, product reel or feature loop, including when they share a reference video and say "make one like this".
 metadata:
   author: Ekos Labs
-  version: "0.2.0"
+  version: "0.3.0"
 ---
 
 # Launch Film Builder
 
-Story, voice, motion and sound for a short launch film, built as a Remotion project the user owns and can keep editing. This is the method behind Ekos Labs' own launch films, packaged with a working template: a coded character who talks, blinks, gestures and is drawn in moving dither dots; headlines that land word by word on the voiceover; cards, consoles and stamps that move like the UI they show; and one component that renders both a 16:9 film and a 9:16 reel.
+Every launch film Ekos Labs has made, as recipes you can reuse. Each recipe gives:
+- the real film's structure, second by second;
+- how it was built, with the actual source code;
+- the look and the sound;
+- the corrections that came out of review.
 
-Execution mode: local runtime. Needs Node.js 18+, ffmpeg and Python 3 with numpy. Optional: `ELEVENLABS_API_KEY` for the real voice (a stand-in voice is used otherwise, fine for drafts), and mlx-whisper or faster-whisper for exact word timings. Read keys from environment variables. Never ask the user to paste a key into chat, never write a key into a file, and never print one.
+A runnable Remotion template and four scripts (voice and timing, mastering, contact sheets, project setup) do the shared work.
 
-Example request: "Make a 30-second promo for our AI inbox, like this Pocketsflow video, with a vertical version for Reels."
+Execution mode: local runtime. Needs Node.js 18+, ffmpeg and Python 3 with numpy. Optional:
+- `ELEVENLABS_API_KEY` for voices; a stand-in voice works for drafts;
+- mlx-whisper or faster-whisper for exact word timing;
+- the latest yt-dlp (via `uvx`) for reference and footage downloads.
 
-## Pick the format
+Read keys from environment variables. Never ask the user to paste a key into chat, never write a key into a file, and never print one.
 
-| Format | Use it for | Length | Read |
-|---|---|---|---|
-| **Mascot promo** (default) | A product, feature or free tool: what it is, who it is for, try it now | 25 to 40 s | [mascot-promo.md](references/mascot-promo.md) |
-| **Manifesto film** | A company or category launch: a belief, not a feature list | 60 to 100 s | [manifesto-film.md](references/manifesto-film.md) |
-| **Product reel** | A loop that shows one deliverable building itself, no voice | 6 to 10 s | [film-patterns.md](references/film-patterns.md) |
+Example request: "Make a launch teaser for our company like the a16z 'It's time to build' film, then a 30-second promo for the product with a vertical version."
 
-If the user shares a reference video, the reference wins: match its structure, pacing, look and tone, and study it frame by frame before writing anything. [film-patterns.md](references/film-patterns.md) explains how. Do not add things the reference does not have (the founder on camera, a sales pitch, a new visual style) unless the user asks for them.
+## The films
+
+| # | Film | What it is | Length · format · voice | Recipe |
+|---|---|---|---|---|
+| 01 | **SF launch teaser** | Documentary collage. Real artefacts (photos, chyrons, tweets, bites) stack on white while serif lines tell the story. Black on the turns, three words and the mark at the end. On the Whop model | 36 s · 16:9 · no narrator, real bites | [01](references/films/01-sf-launch-teaser.md) |
+| 02 | **Explanatory launch** | The founder's single take as the spine. Pillars and proof beside them, the real product UI changing state on their words, captions throughout | 89 s · 16:9 · founder's voice | [02](references/films/02-explanatory-founder.md) |
+| 03 | **Jarvis film** | "It's time to build" shape. The product speaks as on-screen messages, a builder montage, a gap, the reveal on the music's hit, status panels, the mark | 62 s · 16:9 · music only | [03](references/films/03-jarvis-build-film.md) |
+| 04 | **"It's time to be heard"** | a16z manifesto made the video-use way. A narrator against archival and famous bites, 0.8 s cuts, 4:3 film look, a logo burst on the downbeat, captions | 102 s · 4:3 · narrator + bites | [04](references/films/04-heard-manifesto.md) |
+| 05 | **Find promo** | A talking, gesturing 3D mascot in moving dither dots. Word-by-word headlines, cards, a console, a stamp. Wide and vertical from one component. **Runnable template** | 34 s · 16:9 + 9:16 · AI voice | [05](references/films/05-find-mascot-promo.md) |
+| 06 | **Finder site film** | Silent HTML and GSAP film: claim, how, result. Opens on the real homepage, the report blooms and changes six times, then shrinks into the logo | 59 s · 16:9 · silent | [06](references/films/06-finder-site-film-html.md) |
+| 07 | **Finder reel** | Dark 9:16 product reel on the brand system, product hero footage as a band, synthesised sound from a cue list, captions plus SRT | 40 s · 9:16 · sound design | [07](references/films/07-finder-vertical-reel.md) |
+| 08 | **Skill preview loops** | One loop per feature: the deliverable builds itself, holds and resets. Nine templates, 31 films rendered in one run | 8 s each · 16:9 · silent | [08](references/films/08-skill-preview-loops.md) |
+| 09 | **Pocket CMO launch** | Kinetic serif statements on cream with drifting colour, a stamped chat mock, three live tool demos, a price countdown, a bookend close | 53 s · 16:9 · AI voice | [09](references/films/09-pocket-cmo-kinetic.md) |
+
+Each recipe links its frame sheet (`assets/films/<id>/frames.jpg`). Open it before building, so you know the look you are aiming for. Films 01 and 04 have no frame sheet, because they are cut from real people and news footage; their shot lists are in the recipe, and [footage.md](references/footage.md#finding-footage-with-your-agent) shows how the agent finds that kind of footage for a new film.
+
+**Choosing:**
+- Category or company launch, no product yet: 01 or 04.
+- An assistant or agent product told as a story: 03.
+- The founder explaining the product: 02.
+- A product or free tool with a clear "try it": 05, plus 07 for the vertical slot.
+- A tool whose output is visual, silent in feeds: 06.
+- Many features: 08.
+- An argument-led launch with little UI: 09.
+
+A full launch is a sequence; see [film-patterns.md](references/film-patterns.md). If the user shares a reference video, the reference wins: study it first and match it.
 
 ## Workflow
 
 ### 1. Brief
 
-Collect what the film needs, and ask only for what is missing and blocking:
+Collect, and ask only for what is missing and blocking:
+- product, audience and the one action;
+- which film (or films) and formats;
+- brand colours, fonts, logo and website (most recipes copy the site's tokens and components);
+- real proof the user may show;
+- footage and music they have rights to;
+- whether the founder appears.
 
-- Product, audience and the one action at the end (a URL or a button label).
-- Format and length, and whether a vertical reel is wanted too (usually yes).
-- Brand: accent colour, logo or wordmark, tone of voice. The template uses Inter and Instrument Serif; swap them if the brand has its own fonts.
-- Character: use the default (glasses and a headset), restyle it, reshape it to match an image the user has, or leave it out.
-- Proof: only real numbers, names and logos the user can use. Everything else on screen is an example and must read as one.
-- Music: a track the user has rights to, or none.
+### 2. Study and write
 
-### 2. Story and script
+1. Open the recipe and its frame sheet. For a reference video, write a teardown first ([film-patterns.md](references/film-patterns.md)).
+2. Write the script or line list with what is on screen for each beat, and get a yes before building. Changes are cheap here and expensive later.
+3. For films cut from footage, also write the source list and the music plan: where it breathes, where it hits.
 
-Write the voiceover as short spoken lines, one idea each and under 12 words. The hook lands in the first two seconds and the product is named by second eight. Every visual beat will hang off a spoken word, so write lines whose key words are the things you want to show: "Refunds? Where's my order?" gives you two cards on two words. Show the user the script with a one-line description of what is on screen for each line, and get a yes before voicing. Changes are cheap here and expensive later. [film-patterns.md](references/film-patterns.md) has the beat sheets and writing rules.
-
-### 3. Start the project
+### 3. Set up
 
 ```bash
 bash <skill-dir>/scripts/new_project.sh <project-dir>
 ```
 
-This copies [the template](assets/template/) and installs pinned Remotion, three.js and the fonts. The template is a complete 30-second example film for a made-up product, Acme, so the first render works before anything is changed. Its files:
+This copies [the template](assets/template/), a complete Remotion project with the generic version of film 05, and installs pinned dependencies. Build every Remotion film here:
+- add a composition for the film;
+- adapt that film's source from `assets/films/<id>/source/`;
+- reuse `kit.tsx`, `timing.ts`, `Char.tsx` and `scripts/render.mjs`.
 
-- `src/script.json` holds the voice lines; `src/timeline.json` is generated from it.
-- `src/Promo.tsx` holds the scenes; this is where the story goes.
-- `src/kit.tsx` holds brand tokens, word-by-word headlines, cards, the wipe and captions.
-- `src/Char.tsx` holds the character's poses (expressions plus hands); `src/Mascot3D.tsx` is the character itself.
-- `scripts/render.mjs` renders films and stills.
+Film 06 is a single HTML file instead; start from its source.
 
-### 4. Voice and timing
+The bundled film sources are the real Ekos code. Paths in them are placeholders, and media (footage, screenshots, logos, music) is not included. They show exactly how each film was built; adapt them rather than running them as-is.
 
-Put the approved lines into `src/script.json`, then:
+### 4. Voice, timing, music
 
 ```bash
 python3 <skill-dir>/scripts/prepare_audio.py --project <project-dir>
 ```
 
-It voices each line (ElevenLabs if a key is set, a stand-in voice if not), trims silence, measures every word's start and end with whisper, synthesises the sound effects, lines up the music on a beat, and writes the mouth curve that drives the character's lips. It prints every line with numbered words: `v4 8.10-11.09 0:Acme 1:reads 2:every 3:message,`. Those numbers are what the scenes use. Re-run it after any script change; only changed lines are re-voiced. [voice-and-sound.md](references/voice-and-sound.md) covers voices, tags like `[whispers]`, music and the mix.
+From `src/script.json` this produces:
+- the voice for each line (ElevenLabs, or a stand-in voice);
+- word timings from whisper;
+- the character's mouth curve;
+- synthesised sound effects;
+- the music lined up on a beat;
+- `src/timeline.json`, which the film reads.
 
-### 5. Build the scenes
+Key every visual beat to a spoken word (`w('v4',3).s`), never to a hand-typed second. For a founder's recorded take, transcribe the take instead and key to it. Films 03, 04 and 07 also have their own prepare scripts in their sources, for footage and sound design. Voices, tags, music and the mix are in [voice-and-sound.md](references/voice-and-sound.md); footage sourcing, cutting and grading are in [footage.md](references/footage.md).
 
-Rewrite `src/Promo.tsx` for the new story, keeping the mechanics that make it feel produced:
+### 5. Build
 
-- **Key every beat to a word.** Use `w('v4',3).s` (the start of word 3 of line v4), never a second typed by hand. When a line is re-voiced, everything tied to it moves with it.
-- **Derive scene boundaries from line starts** (the `T` object), so scenes stretch with the voice.
-- **One accent word per headline** in the serif italic and the accent colour. One colour does the work.
-- **Lay out each scene twice.** `useLay()` returns `v`; give the vertical reel its own positions and sizes. Never crop the wide film into a reel.
-- **Keep the character alive.** Give `Char` pose keys (`[['front',0],['wink',w('v3',7).e]]`); he eases between them, talks with the voice and blinks on his own.
+Follow the recipe. Rules that hold for every film:
+- one accent colour;
+- one serif italic accent word per line;
+- the brand's own fonts and components;
+- real product surfaces;
+- each format laid out for itself (a reel is never a crop of the wide film).
 
-Brand colours and the name live in `BRAND` in `kit.tsx`. The character's colours, glasses, headset and dot colours live in `STYLE` in `Mascot3D.tsx`. [mascot-promo.md](references/mascot-promo.md) is the scene-by-scene recipe for both layouts. [character.md](references/character.md) covers restyling him, reshaping him to match a reference image, and adding poses and gestures.
+The 3D character is in [character.md](references/character.md).
 
-### 6. Check with stills, then render
+### 6. Check, render, master, deliver
 
-Render stills at each beat in both formats before rendering any video. A still takes seconds and a full render takes minutes:
+1. Render stills at every beat in every format and make a contact sheet.
+2. Fix what you find, then render.
+3. Master with `master.py` (-14 LUFS, -1.5 dB true peak).
+4. Check a contact sheet built from the final file.
 
-```bash
-node scripts/render.mjs PromoWide --stills 0.8,2.6,5.5,10,14,18.9,21.6,27
-node scripts/render.mjs PromoVertical --stills 0.8,2.6,5.5,10,14,18.9,21.6,27
-python3 <skill-dir>/scripts/contact_sheet.py out/stills/PromoVertical sheet.jpg
-```
+Deliver the masters, previews, the script, and notes on voices, music and footage sources. The checklist and platform specs are in [qa-and-delivery.md](references/qa-and-delivery.md). Keep a `project.md` log beside the project for the next session.
 
-Look at every frame for:
-- text overlapping the character or running off the frame;
-- a beat that fires before its word;
-- empty frames;
-- the reel's key text sitting in the bottom 320 px or the right 120 px, which platform UI covers.
+## Rules every Ekos film learned the hard way
 
-`node scripts/render.mjs CharacterTest --stills 0.5,1.5,2.5,3.5,4.5,5.5,6.5` shows every pose when the character changes. Then render both films.
-
-### 7. Master and deliver
-
-```bash
-python3 <skill-dir>/scripts/master.py out/PromoWide.mp4 out/<name>-wide.mp4 --preview out/<name>-wide-preview.mp4
-python3 <skill-dir>/scripts/master.py out/PromoVertical.mp4 out/<name>-reel.mp4 --preview out/<name>-reel-preview.mp4
-python3 <skill-dir>/scripts/contact_sheet.py out/<name>-reel.mp4 final.jpg --times <one time per scene>
-```
-
-Masters are -14 LUFS and true peak -1.5 dB, the level social platforms play at. Build the contact sheet from the final file, not the stills: it is the only proof that every scene survived the render and the encode. Deliver the masters and previews, and say which voice was used. If it was the stand-in, say so plainly. [qa-and-delivery.md](references/qa-and-delivery.md) has the full checklist and platform specs.
-
-## Things that went wrong before, so they do not again
-
-- **A blank or black character** means WebGL had no backend. `render.mjs` passes `gl: 'angle'`; if frames still come out blank, set `REMOTION_GL=swangle` (or `angle-egl` on Linux).
-- **"width prop must be an integer"** comes from a scaled character size. `Char` rounds it; any new canvas must too.
-- **Dots that slide with the character instead of crawling** mean the dither is not locked to the screen. Inside a positioned card or clip, pass the box's screen position as `ox`/`oy`.
-- **A beat that fires early** usually comes from a stand-in voice or estimated word times. Fix the timing source (install whisper, set the key); do not nudge seconds by hand.
-- **Fake proof.** Never invent customer logos, user counts, ratings or testimonials. Demo UI may show example data, but label it ("example") wherever it could be read as a real result.
-- **Rights.** Use only music, footage and fonts the user may use. Social clips are often fine for social posts but not for ads; ask when it is unclear.
-- **Never publish or post** the film anywhere. Deliver files.
+- **Follow the reference.** Match its format; do not add the founder, a product pitch or a new style unless asked.
+- **No fake proof.** Never invent customer logos, counts, ratings or testimonials. Demo data is labelled "example", and prior results carry their attribution.
+- **No generic-template look.** Avoid tilted cards, glass and blur on UI, loading bars and rainbow accents. Clean beats flashy.
+- **Caption everyone who speaks,** and keep captions clear of the bottom 320 px in reels.
+- **Time to real audio,** never to word counts. Scene lengths estimated from word counts drift behind the voice.
+- **Cut to the music:** find its breath and its hit first, then put the turn on the hit.
+- **New film, new concept.** Do not reuse an earlier film's footage or idea.
+- **Rights:** footage and music must be the user's to use. Social clips may be fine for organic posts but not for ads; credit music when its licence asks.
+- **Technical:** WebGL in renders needs `gl: 'angle'` (or `swangle`); canvas sizes must be whole pixels; check the rendered file, not just stills.
+- **Never publish or post** anything. Deliver files.
 
 ## Output
 
-- `<project-dir>/`: the Remotion project, which the user can edit and re-render with `npx remotion studio src/index.ts`.
-- `script.md`: the approved lines with what is on screen for each.
-- `out/<name>-wide.mp4` (1920x1080) and `out/<name>-reel.mp4` (1080x1920), mastered, plus small previews.
+- The project folder, editable and re-renderable.
+- `script.md`.
+- Mastered films in each format, plus previews.
+- `project.md` with decisions and sources.
 
 ## Implementation support
 
