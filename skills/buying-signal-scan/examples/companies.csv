@@ -1,0 +1,4 @@
+company,domain,country,employer,news_query
+Bauhaus,bauhaus.info,DE,Bauhaus AG,"""Bauhaus AG"" OR ""Bauhaus Baumarkt"" when:90d"
+FLYERALARM,flyeralarm.com,DE,FLYERALARM GmbH,
+Ottobock,ottobock.com,DE,,

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "slug": "idea-gate",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "accessTier": "free",
   "executionMode": "agent-native",
   "source": {

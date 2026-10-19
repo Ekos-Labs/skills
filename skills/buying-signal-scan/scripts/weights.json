@@ -1,0 +1,17 @@
+{
+  "_note": "Default points per signal type. half_life_days: points halve every N days. max_age_days: older signals score 0. decay false: a current state, scored at full weight while it is still true. Tune with feedback.py.",
+  "role_hiring":    {"label": "Hiring for a relevant role",   "weight": 3, "half_life_days": 21, "max_age_days": 90},
+  "hiring_volume":  {"label": "Many open roles",              "weight": 2, "half_life_days": 21, "max_age_days": 60},
+  "new_leadership": {"label": "New leadership",               "weight": 3, "half_life_days": 42, "max_age_days": 180},
+  "relaunch":       {"label": "Website relaunch or new shop", "weight": 2, "half_life_days": 21, "max_age_days": 120},
+  "outdated_stack": {"label": "Outdated tech stack",          "weight": 1, "decay": false},
+  "funding_growth": {"label": "Funding, acquisition or new location", "weight": 3, "half_life_days": 21, "max_age_days": 120},
+  "ad_activity":    {"label": "Ad activity change",           "weight": 1, "half_life_days": 21, "max_age_days": 60},
+  "trade_fair":     {"label": "Trade fair presence",          "weight": 2, "half_life_days": 21, "max_age_days": 90, "future_ok": true},
+  "reviews":        {"label": "Bad or falling reviews",       "weight": 1, "half_life_days": 21, "max_age_days": 90},
+  "risk":           {"label": "Warning",                      "weight": 0, "half_life_days": 21, "max_age_days": 180},
+  "news_other":     {"label": "Other news",                   "weight": 0, "half_life_days": 21, "max_age_days": 90},
+  "strength": {"strong": 1.5, "normal": 1.0, "weak": 0.5},
+  "repeat_factor": 0.5,
+  "type_cap_multiple": 2.0
+}

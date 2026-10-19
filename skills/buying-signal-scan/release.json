@@ -1,16 +1,18 @@
 {
   "schemaVersion": 1,
   "slug": "buying-signal-scan",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "accessTier": "free",
-  "executionMode": "byo-provider",
+  "executionMode": "local-runtime",
   "source": {
     "kind": "ekos-original",
-    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+    "description": "Written by Ekos Labs. Bundles standard-library Python scripts for the Bundesagentur fuer Arbeit Jobsuche API, public job board feeds (Personio, Greenhouse, Lever, Ashby), Google News RSS, a website tech check, and decay scoring. No upstream skill files are bundled."
   },
   "dependencies": [
     "Claude Code or Codex",
-    "PredictLeads API key or Apify API token (optional; falls back to web search)"
+    "Python 3.9 or later (standard library only)",
+    "No API key needed for the core scan",
+    "Optional: PredictLeads API key and token, Firecrawl API key, Apify token"
   ],
   "qa": {
     "runs": [],

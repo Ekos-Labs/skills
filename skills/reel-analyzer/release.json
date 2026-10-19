@@ -1,18 +1,20 @@
 {
   "schemaVersion": 1,
   "slug": "reel-analyzer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "accessTier": "free",
   "executionMode": "local-runtime",
   "source": {
     "kind": "ekos-original",
-    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+    "description": "The Pocket CMO reel analyzer by the same author (MIT), packaged as a skill: bundled Python scripts for download, frames, cut detection, Groq transcription, and outlier ranking by views divided by followers, plus a reference file of reel pattern names."
   },
   "dependencies": [
     "Claude Code or Codex",
-    "yt-dlp",
-    "ffmpeg",
-    "Optional: Groq API key for transcripts"
+    "Python 3.9+ (standard library only)",
+    "ffmpeg and ffprobe",
+    "uv (runs the latest yt-dlp via uvx) or a system yt-dlp",
+    "Optional: GROQ_API_KEY for timestamped transcripts",
+    "Optional: META_ACCESS_TOKEN for the own Instagram business account mode"
   ],
   "qa": {
     "runs": [],

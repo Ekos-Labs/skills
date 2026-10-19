@@ -3,12 +3,12 @@ name: idea-gate
 description: Check a proposed X, LinkedIn, Instagram, or other content idea against ten evidence-backed gates before drafting or posting. Use when someone wants a clear make-or-rework decision on an idea, not a prediction of reach or virality.
 metadata:
   author: Ekos Labs
-  version: "0.1.0"
+  version: "1.0.0"
 ---
 
 # Idea Gate
 
-Decide whether a content idea is ready to make. This adapts Eshaan Kansal's open-source Pocket CMO Idea Gate; see [source, licence, and gates](references/gates.md). The original tool is available separately and remains free. This package is a draft and has not completed behavioral QA or been released.
+Decide whether a content idea is ready to make. This adapts Eshaan Kansal's open-source Pocket CMO Idea Gate; see [source, licence, and gates](references/gates.md). The original tool runs as a local dashboard in Pocket CMO; this skill runs the same ten gates inside your agent.
 
 Execution mode: agent-native in Claude Code or Codex. No extra API key is required. Do not claim to simulate an audience or forecast impressions, engagement, conversion, or virality.
 
@@ -17,6 +17,14 @@ Example request: “Should I make this LinkedIn post idea for early-stage SaaS f
 ## Inputs
 
 Ask for the proposed idea, intended reader or viewer, and channel if absent. Use the user's existing product context or writing samples only when available and authorized. Ask about hard brand, legal, client, or confidentiality boundaries if a proposed claim might cross one. Do not demand a brand kit or analytics account just to judge an idea.
+
+## Saved settings
+
+Pocket CMO keeps two settings that apply to every check. Keep them in `idea-gate-config.md` in the user's project, and create it on first use if the user wants checks to be consistent:
+- **Hard boundaries:** topics, clients or claims that are always a NO (for example "no client names", "no income claims").
+- **Fingerprint:** two or three sentences on what makes this maker recognisable: their voice, their life, the specifics they always bring. Gate 10 is judged against it.
+
+Read the file before each check if it exists. Never write private details into it that the user did not give you.
 
 ## Method
 

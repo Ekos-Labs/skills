@@ -1,16 +1,17 @@
 {
   "schemaVersion": 1,
   "slug": "short-form-script-studio",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "accessTier": "free",
   "executionMode": "agent-native",
   "source": {
     "kind": "ekos-original",
-    "description": "Written by Ekos Labs. No upstream skill files are bundled."
+    "description": "Written by Ekos Labs from the script workflow, attention principles and outlier-reel patterns it uses for its own founder's reels. Patterns were read from 48 outlier transcripts; no creator's transcript or lines are included."
   },
   "dependencies": [
     "Claude Code or Codex",
-    "Optional: Reel Analyzer skill for reference breakdowns"
+    "Recommended: the Reel Analyzer skill, to find and break down outlier reels",
+    "Optional: Idea Gate skill, for the final check"
   ],
   "qa": {
     "runs": [],

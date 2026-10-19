@@ -3,12 +3,12 @@ name: competitor-ads-intelligence
 description: Research competitors' Meta ads and turn observed hooks, offers, and formats into original ad tests. Use for competitor paid-social research, not for claims about which ads are profitable.
 metadata:
   author: Ekos Labs
-  version: "0.1.0"
+  version: "1.0.0"
 ---
 
 # Competitor Ads Intelligence
 
-Show what comparable businesses are advertising on Facebook and Instagram, then brief a small set of **original** tests for the user's offer. This is a research-and-creative brief, not an ad launcher or a performance estimator. This package is a draft, not a released product.
+Show what comparable businesses are advertising on Facebook and Instagram, then brief a small set of **original** tests for the user's offer. This is a research-and-creative brief, not an ad launcher or a performance estimator.
 
 Example request: “Find three direct competitors in Germany, review their active Meta ads, and give me four distinct angles worth testing for my own product.”
 
@@ -22,7 +22,7 @@ Read [Meta Ad Library access and limits](references/meta-ad-library.md) before q
 python3 scripts/meta_ad_library.py --country DE --page-id 123456789 --version "$META_GRAPH_API_VERSION"
 ```
 
-Do not paste a token into chat, a skill file, a command transcript, or the final brief. The user configures it in their own environment. The script prints only selected research fields, never the token or Meta's token-bearing pagination/snapshot URLs. If the API is unavailable or the market is outside EU/UK, use the public [Meta Ad Library](https://www.facebook.com/ads/library/) interactively or analyze links/screenshots the user supplies. Do not use an unofficial scraper or bypass an access limit. State the coverage gap instead of inventing ads.
+Do not paste a token into chat, a skill file, a command transcript, or the final brief. The user configures it in their own environment. The script prints only selected research fields, never the token or Meta's token-bearing pagination/snapshot URLs. If there is no token, the API is unavailable, or the market is outside EU/UK, open the public [Meta Ad Library](https://www.facebook.com/ads/library/) in the user's browser (Claude in Chrome or a computer-use tool) and read the ads there, or analyze links/screenshots the user supplies. Do not use an unofficial scraper or bypass an access limit. State the coverage gap instead of inventing ads.
 
 ## Method
 
