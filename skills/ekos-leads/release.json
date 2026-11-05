@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "slug": "ekos-leads",
+  "version": "0.1.0",
+  "accessTier": "free",
+  "executionMode": "hosted",
+  "source": {
+    "kind": "ekos-original",
+    "description": "Written by Ekos Labs. Uses the Ekos MCP connection; no upstream skill files are bundled."
+  },
+  "dependencies": [
+    "Claude Code, Claude Desktop, Codex, Cursor or another MCP client",
+    "A free Ekos account (app.ekoslabs.com) connected from the Connect agent page"
+  ],
+  "qa": {
+    "runs": [],
+    "dogfood": null,
+    "publicPreview": null,
+    "approvedBy": null,
+    "approvedAt": null
+  }
+}
