@@ -22,7 +22,7 @@
 <p align="center">
   <a href="https://www.ekoslabs.com/skills">Visual catalog</a> ·
   <a href="#quick-start">Quick start</a> ·
-  <a href="#the-collection">31 skills</a> ·
+  <a href="#the-collection">32 skills</a> ·
   <a href="https://www.ekoslabs.com/skills/install">Install guide</a> ·
   <a href="README.zh-CN.md">简体中文</a>
 </p>
@@ -30,7 +30,7 @@
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-315efb" alt="MIT License" /></a>
   <a href="https://github.com/Ekos-Labs/skills/stargazers"><img src="https://img.shields.io/github/stars/Ekos-Labs/skills?style=flat&color=315efb" alt="GitHub stars" /></a>
-  <img src="https://img.shields.io/badge/marketing_skills-31-315efb" alt="31 marketing skills" />
+  <img src="https://img.shields.io/badge/marketing_skills-32-315efb" alt="32 marketing skills" />
   <img src="https://img.shields.io/badge/Claude_Code_%2B_Codex-compatible-315efb" alt="Claude Code and Codex compatible" />
 </p>
 
@@ -97,9 +97,9 @@ Your business context
 | [Competitor Ads Intelligence](skills/competitor-ads-intelligence) | [Campaign Image Studio](skills/campaign-image-studio) | [Lead Scoring](skills/lead-scoring) | [Deliverability Check](skills/deliverability-check) |
 | [Positioning Fix](skills/positioning-fix) | [Ad Creative Variants](skills/ad-creative-variants) | [Outreach Sequence Writer](skills/outreach-sequence-writer) | [Distribution Report](skills/distribution-report) |
 | [Reddit Buyer Radar](skills/reddit-buyer-radar) | [Launch Film Builder](skills/launch-film-builder) | [Outreach Launcher](skills/outreach-launcher) | [Reel Analyzer](skills/reel-analyzer) |
-| [Pre-call Brief](skills/pre-call-brief) | [Idea Gate](skills/idea-gate) |  | [Voice Match](skills/voice-match) |
+| [Pre-call Brief](skills/pre-call-brief) | [Idea Gate](skills/idea-gate) | [Ekos Leads](skills/ekos-leads) | [Voice Match](skills/voice-match) |
 
-The repository currently contains 31 skills. Some are early releases and are being improved in public. Read a skill's requirements and limitations before running it.
+The repository currently contains 32 skills. Some are early releases and are being improved in public. Read a skill's requirements and limitations before running it.
 
 ## Works with the agent you already use
 

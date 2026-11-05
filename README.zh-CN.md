@@ -23,14 +23,14 @@
   <a href="README.md">English</a> ·
   <a href="https://www.ekoslabs.com/skills">可视化目录</a> ·
   <a href="#快速开始">快速开始</a> ·
-  <a href="#技能目录">31 个技能</a> ·
+  <a href="#技能目录">32 个技能</a> ·
   <a href="https://www.ekoslabs.com/skills/install">安装指南</a>
 </p>
 
 <p align="center">
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-315efb" alt="MIT License" /></a>
   <a href="https://github.com/Ekos-Labs/skills/stargazers"><img src="https://img.shields.io/github/stars/Ekos-Labs/skills?style=flat&color=315efb" alt="GitHub stars" /></a>
-  <img src="https://img.shields.io/badge/营销技能-31-315efb" alt="31 个营销技能" />
+  <img src="https://img.shields.io/badge/营销技能-32-315efb" alt="32 个营销技能" />
 </p>
 
 ---
@@ -87,7 +87,7 @@ cd skills
 
 ## 技能目录
 
-仓库包含 31 个营销技能，覆盖：
+仓库包含 32 个营销技能，覆盖：
 
 - 客户、市场、竞品和定位研究；
 - 创始人内容、长文、短视频脚本、轮播内容和发布视频；
