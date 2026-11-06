@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "slug": "ekos-leads",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "accessTier": "free",
   "executionMode": "hosted",
   "source": {
