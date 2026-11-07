@@ -54,7 +54,7 @@ For other agents, copy just the `skills/ekos-leads` folder into that agent's ski
 | | |
 | --- | --- |
 | First 5 leads | Free |
-| More leads | From credits you top up (from $39). 1 credit = $1 or €1 |
+| More leads | From credits you top up (from $39). 1 credit = $1 |
 | Connecting LinkedIn | Free |
 | Monthly fee | None |
 
