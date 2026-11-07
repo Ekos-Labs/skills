@@ -1,16 +1,19 @@
 # Ekos Leads
 
-Find B2B buyers and run LinkedIn outreach to them, straight from Claude Code, Codex, Cursor or Claude Desktop.
+The skill that turns your agent into an AI GTM engineer.
 
-Ekos finds the decision-makers who fit your business, checks every lead before it reaches you, and sends the LinkedIn outreach from your own account. You ask in plain words; your agent does the rest.
+Works in Claude Code, Codex, Cursor and Claude Desktop.
 
-## Why use it
+## What it does
 
-- **First 5 leads free.** No card needed.
-- **No subscription.** Top up when you want more (from $39), pay only for what you use. Credits never expire.
-- **Checked leads, not a raw database.** Every lead is a decision-maker, checked for fit with your brief, with a LinkedIn profile and email and phone when found. No duplicates.
-- **Outreach included.** Ekos writes the LinkedIn sequence with you, sends it from your own account at safe daily limits, stops when someone replies and reports back. Connecting LinkedIn is free.
-- **You stay in control.** Your agent asks before anything that spends credits or sends a message.
+1. **Breaks your ICP into segments.** One broad market becomes clear segments, each with its own buyers.
+2. **Builds your champions.** For every segment, the people who actually decide and buy.
+3. **Checks 50+ buying signals.** Hiring, funding, new leaders, growth and more, so you reach people at the right moment.
+4. **Gets leads from 30+ sources.** Decision-makers with LinkedIn, and email and phone when found.
+5. **Checks their fit.** Every lead is checked against your brief before it reaches you.
+6. **Connects your LinkedIn for warm-up and outreach.** It warms up your account, then sends your sequence from it at safe daily limits, stops when someone replies and reports back.
+
+Your agent asks before anything that spends credits or sends a message.
 
 ## What you can ask
 
