@@ -48,7 +48,21 @@ Ekos Skills packages those processes as reusable agent instructions. Each skill 
 
 ## Quick start
 
-Clone the collection:
+### Only want leads?
+
+Install only the ekos-leads skill from Ekos-Labs/skills. For Claude Code:
+
+```bash
+git clone --depth 1 https://github.com/Ekos-Labs/skills.git /tmp/ekos-skills
+mkdir -p ~/.claude/skills
+cp -r /tmp/ekos-skills/skills/ekos-leads ~/.claude/skills/
+```
+
+Then ask your agent "Find me leads" and follow the one link it gives you. Your first five leads are free, and you need no other API keys. Details in the [Ekos Leads README](skills/ekos-leads).
+
+### The full collection
+
+Clone the whole collection:
 
 ```bash
 git clone https://github.com/Ekos-Labs/skills.git
@@ -110,6 +124,8 @@ The repository does not include model access, API credits, or third-party accoun
 ## API keys and paid tools
 
 Ekos does not provide shared API keys. A skill may ask you to connect your own account for services such as Apollo, Apify, Firecrawl, Meta, or an AI model provider.
+
+[Ekos Leads](skills/ekos-leads) is the exception: it runs on your Ekos account and needs no other keys.
 
 Each skill must explain what it needs and ask before a paid or externally mutating action. Never commit credentials to this repository.
 

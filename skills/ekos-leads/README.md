@@ -8,8 +8,8 @@ Works in Claude Code, Codex, Cursor and Claude Desktop.
 
 1. **Breaks your ICP into segments.** One broad market becomes clear segments, each with its own buyers.
 2. **Builds your champions.** For every segment, the people who actually decide and buy.
-3. **Checks 50+ buying signals.** Hiring, funding, new leaders, growth and more, so you reach people at the right moment.
-4. **Gets leads from 30+ sources.** Decision-makers with LinkedIn, and email and phone when found.
+3. **Checks buying signals across hiring, funding, leadership changes, engagement, intent and company changes,** so you reach people at the right moment.
+4. **Finds decision-makers from many data sources.** With LinkedIn, and email and phone when found.
 5. **Checks their fit.** Every lead is checked against your brief before it reaches you.
 6. **Connects your LinkedIn for warm-up and outreach.** It warms up your account, then sends your sequence from it at safe daily limits, stops when someone replies and reports back.
 
@@ -22,20 +22,32 @@ Your agent asks before anything that spends credits or sends a message.
 - "Start a LinkedIn campaign for the top 10 and show me the messages first."
 - "How is my outreach doing? Who replied?"
 
+## Install the skill
+
+Install only the ekos-leads skill from Ekos-Labs/skills. You don't need the rest of the collection. For Claude Code:
+
+```bash
+git clone --depth 1 https://github.com/Ekos-Labs/skills.git /tmp/ekos-skills
+mkdir -p ~/.claude/skills
+cp -r /tmp/ekos-skills/skills/ekos-leads ~/.claude/skills/
+```
+
+For other agents, copy just the `skills/ekos-leads` folder into that agent's skills folder. See the [install guide](https://www.ekoslabs.com/skills/install) for each agent.
+
 ## Setup (about 2 minutes)
 
-1. **Create a free account** at [app.ekoslabs.com](https://app.ekoslabs.com/?utm_source=github.com&utm_medium=skill&utm_campaign=ekos_leads_readme). Enter your website. Ekos writes your brief (what you sell, who buys it, where) and starts finding your 5 free leads as soon as you confirm it.
-2. **Connect your agent.** In the app, open **Connect agent**, pick your agent and click **Connect**. You get one ready-to-paste setup with your key filled in.
-3. **Paste it and restart your agent.** In Claude Code, run the command in your own terminal so the key never goes through chat.
-4. **Add the skill.** Copy this `ekos-leads` folder into your agent's skills folder, or tell your agent:
+1. **Open the start link:** [app.ekoslabs.com/app/start](https://app.ekoslabs.com/app/start?src=skill&utm_source=github.com&utm_medium=skill&utm_campaign=ekos_leads_readme). Enter your website.
+2. **Confirm your brief.** Ekos writes it for you (what you sell, who buys it, where). Your 5 free leads start as soon as you confirm it.
+3. **Verify your email.**
+4. **Copy the one setup command the app shows** for your agent and run it. In Claude Code, run it in your own terminal so your key never goes through chat.
+5. **Restart your agent.**
+6. **Paste the prompt the app gives you:**
 
    ```text
-   Read skills/ekos-leads/SKILL.md and use it to show me my Ekos leads.
+   Ekos is connected. Check my setup and show me the status of my first five leads.
    ```
 
-   See the [install guide](https://www.ekoslabs.com/skills/install) for each agent.
-
-5. **Ask for your leads.** Try "Show me my leads". If your free 5 are still being found, your agent tells you, and you also get an email when they land.
+   Your agent checks your setup and tells you where your free leads are. You also get an email when they land.
 
 ## What it costs
 
@@ -48,6 +60,7 @@ Your agent asks before anything that spends credits or sends a message.
 
 ## Safety
 
+- You don't need any other API keys or data accounts. Ekos does the searching on its side.
 - Your key stays in your agent's config. The skill never asks you to paste it into chat or into a project file.
 - Nothing is spent and nothing is sent on LinkedIn without your clear yes, every time.
 - Messages go out under your name, at daily limits that keep your LinkedIn account safe.
