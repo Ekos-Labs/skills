@@ -47,8 +47,8 @@ Then tell the user: "Type `/mcp`, pick **ekos** and choose **Authenticate**. Sig
 
 Give these steps:
 
-1. Open https://claude.ai/settings/connectors and choose **Add custom connector**.
-2. Name it **Ekos** and paste `https://app.ekoslabs.com/mcp`. Press **Add**.
+1. In Claude, open **Customize**, then **Connectors**. Press **Add**, then **Add custom connector** (https://claude.ai/new#customize/connectors).
+2. Name it **Ekos**, paste `https://app.ekoslabs.com/mcp` and press **Continue**. Claude finds the Ekos sign-in by itself: keep its settings and press **Add**.
 3. Press **Connect**, sign in to Ekos and press **Allow**.
 4. In a new chat, turn Ekos on from the tools menu and say "Ekos is connected".
 

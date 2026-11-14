@@ -39,7 +39,7 @@ For other agents, copy just the `skills/ekos-leads` folder into that agent's ski
 Ask your agent "Find me leads". It connects you:
 
 - **Claude Code:** it offers to run `claude mcp add --transport http -s user ekos https://app.ekoslabs.com/mcp`. Then type `/mcp`, pick **ekos**, choose **Authenticate**.
-- **Claude (claude.ai or desktop):** Settings, Connectors, **Add custom connector**, paste `https://app.ekoslabs.com/mcp`, **Connect**.
+- **Claude (claude.ai or desktop):** Customize, Connectors, **Add**, **Add custom connector**, paste `https://app.ekoslabs.com/mcp`, **Connect**.
 - **ChatGPT, Grok, Grok Bot, Codex, Cursor, OpenClaw:** the agent gives you the two or three steps for your app.
 
 Then sign in to Ekos with your email and press **Allow**. Signing in creates your account. Your agent sets up your brief in the chat (what you sell, who buys it, where) and starts your 5 free leads. No API key, nothing to paste back.
