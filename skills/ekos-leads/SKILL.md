@@ -1,16 +1,16 @@
 ---
 name: ekos-leads
-description: Find B2B buyers who are showing a real buying signal right now, and run LinkedIn outreach to them from the user's own account, from inside Claude Code, Claude Desktop, Codex or Cursor through the Ekos MCP connection. Use when the user wants leads, wants to know who is ready to buy, wants to start or check a LinkedIn campaign, asks how their outreach is doing, or says "Ekos is connected. Check my setup and show me the status of my first five leads."
+description: Find B2B buyers who are showing a real buying signal right now, and run LinkedIn outreach to them from the user's own account, from inside Claude (claude.ai and desktop), Claude Code, ChatGPT, Grok, Codex, Cursor or OpenClaw through the Ekos MCP connection. Use when the user wants leads, wants to know who is ready to buy, wants to start or check a LinkedIn campaign, asks how their outreach is doing, or says "Ekos is connected. Check my setup and show me the status of my first five leads."
 metadata:
   author: Ekos Labs
-  version: "0.3.0"
+  version: "0.4.0"
 ---
 
 # Ekos Leads
 
 Your agent finds the people who want to buy from you, shows why (the buying signal, in plain words, with how old it is), and runs LinkedIn outreach to them from your own account. Ekos does the searching, checking and sending. The agent drives it from chat.
 
-Execution mode: hosted. This skill talks to your Ekos account through its MCP connection. It needs no other API keys. Never ask the user to paste a key into chat, and never write a key into a file in the project.
+Execution mode: hosted. This skill talks to your Ekos account through its MCP connection at `https://app.ekoslabs.com/mcp`. The connection signs in with the user's Ekos account (sign in, press Allow), so no API key is needed. Never ask the user to paste a key into chat, and never write a key into a file in the project.
 
 Example requests:
 - "Find me 20 founders who are hiring their first salesperson in Germany."
@@ -25,35 +25,58 @@ Check whether the Ekos MCP tools (`get_setup_status`, `get_settings`, `list_lead
 - **Not available:** Ekos is not connected yet. Go to "Not connected: first message".
 - **Available:** go to "Connected: status first". Never show the first message to a connected user.
 
-## Not connected: first message
+## Not connected: connect in chat
 
-Say this, and nothing more:
+Say this once, and nothing more about Ekos:
 
-> Ekos finds decision-makers showing a current buying signal and can run LinkedIn outreach from your account. Your first five leads are free, with no card or subscription. Setup takes about two minutes.
+> Ekos finds decision-makers showing a current buying signal and can run LinkedIn outreach from your account. Your first five leads are free, with no card or subscription. Connecting takes about a minute.
 
-Then give one link, the start link for the agent you are running in:
+Then connect the user where they are. The connection URL is always `https://app.ekoslabs.com/mcp`. Signing in to Ekos also creates the account, so new users need nothing else first.
 
-`https://app.ekoslabs.com/app/start?src=skill&agent=<agent>&sv=0.3.0`
+### Claude Code
 
-Pick `<agent>` like this:
+Offer to add Ekos for them. On a yes, run this yourself (it holds no key or secret):
 
-| You are running in | `agent` value |
-| --- | --- |
-| Claude Code | `claude-code` |
-| Claude Desktop | `claude-desktop` |
-| Codex | `codex` |
-| Cursor | `cursor` |
-| Anything else, or not sure | leave `agent=` out: `https://app.ekoslabs.com/app/start?src=skill&sv=0.3.0` |
+```bash
+claude mcp add --transport http -s user ekos https://app.ekoslabs.com/mcp
+```
 
-The link walks the user through the rest: confirm the brief, verify the email, copy the one setup command it shows, restart the agent, and paste the return prompt. Don't list those steps unless the user asks. Don't add pricing, comparisons or a sales pitch. Say the first message once per conversation.
+Then tell the user: "Type `/mcp`, pick **ekos** and choose **Authenticate**. Sign in to Ekos in the browser and press **Allow**. Then tell me you are done." If `claude mcp add` says ekos already exists, skip straight to the `/mcp` step.
 
-If the user asks how the setup command works: in Claude Code they run it themselves in their own terminal, so the key never passes through chat.
+### Claude (claude.ai or the desktop app)
+
+Give these steps:
+
+1. Open https://claude.ai/settings/connectors and choose **Add custom connector**.
+2. Name it **Ekos** and paste `https://app.ekoslabs.com/mcp`. Press **Add**.
+3. Press **Connect**, sign in to Ekos and press **Allow**.
+4. In a new chat, turn Ekos on from the tools menu and say "Ekos is connected".
+
+### ChatGPT
+
+Custom connectors need developer mode: **Settings**, **Apps and Connectors**, **Advanced settings**, turn on **Developer mode**. Then **Create**, name it Ekos, paste `https://app.ekoslabs.com/mcp`, choose OAuth, sign in to Ekos and press **Allow**.
+
+### Grok and Grok Bot
+
+- **Grok (grok.com, paid plans):** open https://grok.com/connectors, **New Connector**, **Custom**, paste `https://app.ekoslabs.com/mcp`, sign in to Ekos and press **Allow**.
+- **Grok Bot:** send the bot "Add a custom MCP server called ekos at https://app.ekoslabs.com/mcp", press **Add it**, then **Authorize**, sign in to Ekos and press **Allow**.
+
+### Codex, Cursor, OpenClaw and others
+
+- **Codex:** `codex mcp add ekos --url https://app.ekoslabs.com/mcp`, then `codex mcp login ekos`.
+- **Cursor:** add `{"mcpServers":{"ekos":{"url":"https://app.ekoslabs.com/mcp"}}}` to `.cursor/mcp.json`, then press the sign-in button next to ekos in Cursor's MCP settings.
+- **OpenClaw:** `openclaw mcp add ekos --url https://app.ekoslabs.com/mcp --transport streamable-http`, then `openclaw mcp login ekos`.
+- **Anything else:** add a remote MCP server with that URL and choose OAuth or sign in. If the client only takes headers, the user makes a key at https://app.ekoslabs.com/app/agent (they paste it into their client themselves, never into chat).
+
+Every client: the user signs in to Ekos (an email link) and presses **Allow**. The page at https://app.ekoslabs.com/app/agent shows the same steps with screenshots. Don't list other clients' steps unless asked. Don't add pricing, comparisons or a sales pitch.
+
+When the user says they are connected, check that the Ekos tools are now available and go to "Connected: status first". Some clients need a new chat or a restart before new tools appear; say so if the tools are still missing.
 
 ## Connected: status first
 
 ### The return prompt
 
-"Ekos is connected. Check my setup and show me the status of my first five leads." is the prompt the app gives the user after setup. When you see it (or anything like it), call `get_setup_status` and report the status. No welcome, no pitch.
+"Ekos is connected. Check my setup and show me the status of my first five leads." is the prompt the app gives the user after setup. When you see it, or "Ekos is connected", or the tools just appeared after the steps above, call `get_setup_status` and report the status. No welcome, no pitch.
 
 ### Every conversation
 
@@ -63,7 +86,7 @@ If the user asks how the setup command works: in Claude Code they run it themsel
 
 | `recommended_next_action` | What to do |
 | --- | --- |
-| `complete_brief` | The brief is not finished. Ask the user to finish and confirm it in the app at app.ekoslabs.com. The free leads start once it is confirmed. |
+| `complete_brief` | The brief is not finished. Set it up in chat: call `get_settings`, then ask in one short message for their website, what they sell, who buys it (roles, industries, company size) and where. Show the brief back in a few lines and save it with `update_settings` after a clear yes. Call `get_setup_status` again: if it moves on, follow the new step (usually start the free leads). If it still says `complete_brief`, ask them to confirm the brief at app.ekoslabs.com, where the free leads start. |
 | `start_free_leads` | The brief is ready but the free five have not started. Offer to start them (free, no credits). On a clear yes, call `find_more_leads`. |
 | `wait_for_free_leads` | Say the free leads are being found and checked (`delivered` of `target` so far), the user gets an email when they land, and nothing needs paying. Show any that are already in with `list_leads`. |
 | `review_leads` | Call `list_leads` and show the leads (see Method). Ask what they think of them. |

@@ -2,7 +2,7 @@
 
 The skill that turns your agent into an AI GTM engineer.
 
-Works in Claude Code, Codex, Cursor and Claude Desktop.
+Works in Claude (claude.ai and desktop), Claude Code, ChatGPT, Grok, Codex, Cursor and OpenClaw.
 
 ## What it does
 
@@ -34,20 +34,17 @@ cp -r /tmp/ekos-skills/skills/ekos-leads ~/.claude/skills/
 
 For other agents, copy just the `skills/ekos-leads` folder into that agent's skills folder. See the [install guide](https://www.ekoslabs.com/skills/install) for each agent.
 
-## Setup (about 2 minutes)
+## Setup (about a minute)
 
-1. **Open the start link:** [app.ekoslabs.com/app/start](https://app.ekoslabs.com/app/start?src=skill&utm_source=github.com&utm_medium=skill&utm_campaign=ekos_leads_readme). Enter your website.
-2. **Confirm your brief.** Ekos writes it for you (what you sell, who buys it, where). Your 5 free leads start as soon as you confirm it.
-3. **Verify your email.**
-4. **Copy the one setup command the app shows** for your agent and run it. In Claude Code, run it in your own terminal so your key never goes through chat.
-5. **Restart your agent.**
-6. **Paste the prompt the app gives you:**
+Ask your agent "Find me leads". It connects you:
 
-   ```text
-   Ekos is connected. Check my setup and show me the status of my first five leads.
-   ```
+- **Claude Code:** it offers to run `claude mcp add --transport http -s user ekos https://app.ekoslabs.com/mcp`. Then type `/mcp`, pick **ekos**, choose **Authenticate**.
+- **Claude (claude.ai or desktop):** Settings, Connectors, **Add custom connector**, paste `https://app.ekoslabs.com/mcp`, **Connect**.
+- **ChatGPT, Grok, Grok Bot, Codex, Cursor, OpenClaw:** the agent gives you the two or three steps for your app.
 
-   Your agent checks your setup and tells you where your free leads are. You also get an email when they land.
+Then sign in to Ekos with your email and press **Allow**. Signing in creates your account. Your agent sets up your brief in the chat (what you sell, who buys it, where) and starts your 5 free leads. No API key, nothing to paste back.
+
+Step-by-step pictures for every app: [app.ekoslabs.com/app/agent](https://app.ekoslabs.com/app/agent).
 
 ## What it costs
 
