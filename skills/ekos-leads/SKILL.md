@@ -101,7 +101,7 @@ State only what is above. Don't promise results, reply rates or prices that are 
 
 | Job | Tools |
 | --- | --- |
-| Understand the offer and the account | `get_setup_status` (call first), `get_offer` (works before an account exists), `get_settings`, `list_plays`, `get_balance` |
+| Understand the offer and the account | `get_setup_status` (call first), `get_offer`, `get_settings`, `list_plays`, `get_balance` |
 | See leads | `list_leads` (ranked, with signal and contact), `get_leads` (delivered with a brief) |
 | Get more leads | `find_more_leads`, `list_requests` (`request_leads` is legacy: it only leaves a note, it does not start a search) |
 | LinkedIn campaigns | `list_linkedin_accounts`, `list_campaigns`, `create_campaign`, `write_sequence`, `update_sequence`, `add_leads_to_campaign`, `set_campaign_status`, `set_send_automatically`, `set_warm_up`, `campaign_activity` |
